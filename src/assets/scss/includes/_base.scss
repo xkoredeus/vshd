@@ -1,0 +1,91 @@
+@import "mixins";
+@import "fonts";
+@import "common/fonts";
+@import "common/colors";
+@import "common/one-classes";
+@import "common/selections";
+@import "common/states";
+@import "common/inputs";
+@import "common/buttons";
+@import "common/section";
+@import "common/swiper-custom";
+@import "common/popup";
+
+html, body {
+  position: relative;
+  font-family: $Arimo, sans-serif;
+  font-size: 14px;
+  line-height: 1.1;
+  color: $black;
+  background-color: $white;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+
+  @include rmin(1466) {
+    font-size: 16px;
+  }
+
+  &.fixed {
+    overflow: hidden;
+    padding-right: 15px;
+  }
+}
+
+a {
+  color: $black;
+
+  &:hover {
+    color: $olive;
+  }
+}
+
+.layout {
+  padding: 10px;
+  overflow: hidden;
+
+  @include r(576) {
+    padding: 10px 13px;
+  }
+
+  &__in {
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  &__overlay {
+    @include ovl;
+    position: fixed;
+    background-color: $white;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    @include ease;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+  }
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.svg-sprite {
+  position: absolute;
+  bottom: 0;
+}
+
+/* Custom animation */
+.fancybox-fx-slide-in-in.fancybox-slide--next,
+.fancybox-fx-slide-in-in.fancybox-slide--previous {
+  transform: translateX(100%)
+}
+
+.fancybox-fx-slide-in-in.fancybox-slide--current {
+  transform: translateX(0)
+}

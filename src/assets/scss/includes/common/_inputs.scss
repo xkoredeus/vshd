@@ -1,0 +1,112 @@
+input,
+textarea,
+select {
+  color: $black;
+  padding: 10px 12px;
+  border: 1px solid $olive;
+  background-color: $tr;
+  transition: all .4s ease;
+}
+option {
+  color: $black;
+}
+textarea {
+  resize: none !important;
+  overflow: hidden;
+  border-radius: none;
+  &::placeholder {
+    color: $black;
+  }
+}
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+textarea::placeholder {
+  color: $black;
+  text-transform: uppercase;
+}
+input:focus,
+textarea:focus,
+input:active,
+textarea:active {
+  color: $black;
+  border-color: $black;
+  box-shadow: none;
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.checkbox {
+  position: relative;
+  margin-bottom: 0;
+  cursor: pointer;
+
+  &__gal {
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid $olive;
+    overflow: hidden;
+    @include ease;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+
+  &__text {
+    font-size: 0.8571rem;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    grid-column-gap: 10px;
+    align-items: center;
+
+    @include r(1466) {
+      grid-template-columns: 42px 1fr;
+    }
+
+    &-in {
+      span {
+        width: 100%;
+        display: inline-block;
+      }
+    }
+  }
+
+  &__link {
+    color: $gray;
+    text-decoration: underline;
+    display: inline-block;
+
+    &:hover {
+      color: $gray;
+      text-decoration: underline;
+    }
+  }
+
+  input {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+
+    &:checked ~ .checkbox__text {
+      .checkbox__gal {
+        background-color: $olive;
+        //&::after {
+        //  transform: translate(-50%, -50%);
+        //}
+      }
+    }
+  }
+}

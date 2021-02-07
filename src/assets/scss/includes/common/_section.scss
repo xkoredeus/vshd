@@ -1,0 +1,55 @@
+.section {
+  &--inner {
+    padding: 5px 0;
+  }
+
+  &--wide {
+    padding: 50px 0;
+  }
+
+  &__title {
+    font-size: 2.5714rem;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @include r(768) {
+      font-size: 3.0714rem;
+    }
+
+    &--small {
+      font-size: 1.4286rem;
+      text-transform: uppercase;
+    }
+
+    &--medium {
+      font-family: $Constantia;
+      font-size: 2.1429rem;
+      line-height: 1;
+      text-transform: uppercase;
+      color: $olive;
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
+
+    &--big {
+      font-size: 5.7143rem;
+      line-height: 0.9;
+      margin-bottom: 70px;
+      text-transform: uppercase;
+
+      @include r(1200) {
+        font-size: 3.0714rem;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 0.8571rem;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  &--olive {
+    background-color: $olive;
+  }
+}

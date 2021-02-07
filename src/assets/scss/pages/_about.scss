@@ -1,0 +1,33 @@
+.about {
+  &__section {
+    &-in {
+      position: relative;
+    }
+
+    &-button {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left: 0;
+      bottom: 0;
+
+      border: 1px solid $dark;
+      border-radius: 50%;
+
+      &-in {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      &-arrow {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+
+        fill: $dark;
+      }
+    }
+  }
+}

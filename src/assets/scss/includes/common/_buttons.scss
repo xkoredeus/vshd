@@ -1,0 +1,70 @@
+button {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: $tr;
+}
+
+.button {
+  position: relative;
+  font-family: $Arimo;
+  text-transform: uppercase;
+  text-align: center;
+  color: $black;
+  letter-spacing: 0.04em;
+  background-color: $olive;
+  border: 1px solid $olive;
+  outline: none;
+  box-shadow: none;
+  @include ease;
+  padding: 11px 8px;
+  display: inline-block;
+
+  &--tr {
+    color: $white;
+    background-color: $tr;
+    border-color: $white;
+
+    &-white {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+
+  &--circle {
+    position: relative;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: $white;
+    width: 100%;
+    border-radius: 50%;
+    background-color: $dark;
+    @include flex-center;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    &:hover {
+      color: $white;
+    }
+
+    &__in {
+      transform: translateX(22px);
+      display: flex;
+      align-items: center;
+    }
+
+    &__icon {
+      fill: $white;
+      margin-left: 25px;
+    }
+
+    &--olive {
+      background-color: $olive;
+    }
+  }
+
+}

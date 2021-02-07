@@ -1,0 +1,22 @@
+@import "includes/fancybox/jquery.fancybox.min";
+@import "includes/swiper/swiper.min";
+@import "includes/bs-grid/grid";
+@import "includes/base";
+
+@import "components/header";
+@import "components/footer";
+
+@import "components/nominal";
+@import "components/news";
+
+@import "components/marque";
+@import "components/project";
+
+@import "pages/home";
+@import "pages/news-page";
+@import "pages/project-page";
+@import "pages/about";
+@import "pages/partners";
+@import "pages/subscribe";
+@import "pages/feedback";
+

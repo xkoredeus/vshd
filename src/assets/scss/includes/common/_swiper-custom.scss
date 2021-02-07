@@ -1,0 +1,22 @@
+.swiper-container {
+  padding: 70px 0;
+  & > .swiper-pagination {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+
+      &-active {
+        background-color: $olive;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.feedback {
+  grid-column: 2/12;
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+
+  &__section {
+    min-height: calc(100vh - 340px);
+    display: flex;
+    align-items: center;
+
+    @include rmin(1466) {
+      min-height: calc(100vh - 370px);
+    }
+  }
+
+  &__title {
+    grid-column: 1/5;
+  }
+
+  &__fields {
+    grid-column: 1/5;
+    grid-row: 2/6;
+
+    display: grid;
+    grid-row-gap: 10px;
+  }
+
+  &__textarea {
+    grid-column: 5/11;
+    grid-row: 2/6;
+  }
+
+  .checkbox {
+    grid-column: 5/11;
+    grid-row: 6/7;
+  }
+
+  .button {
+    grid-column: 5/11;
+    grid-row: 7/8;
+  }
+
+}

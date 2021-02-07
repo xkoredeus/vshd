@@ -1,0 +1,11 @@
+.home {
+  @include r(768) {
+    &__section-title {
+      margin-top: -5px;
+    }
+  }
+
+  &__last-section {
+    margin-bottom: 173px;
+  }
+}

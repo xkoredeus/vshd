@@ -1,0 +1,91 @@
+.project-page {
+  &__begin {
+    .layout__grid {
+      grid-template-rows: repeat(3, auto);
+    }
+
+    .nominal--tight__info {
+      grid-row: 1/4;
+    }
+  }
+
+  &__testimonials {
+    &-list {
+      grid-column: span 4;
+    }
+
+    &-item {
+      position: relative;
+      color: $black;
+      text-transform: uppercase;
+      padding: 8px 0;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 3000px;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background-color: $black;
+      }
+    }
+  }
+
+  &__pdf {
+    grid-column: 12/13;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    span {
+      font-family: Monserrat, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.085em;
+      text-transform: uppercase;
+      margin-left: 9px;
+      color: $olive;
+    }
+  }
+
+  &__team {
+    &-item {
+      &-top {
+        min-height: 60px;
+        border-bottom: 1px solid $olive;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+      }
+
+      &-logo {
+        max-width: 100%;
+        height: auto;
+        opacity: .3;
+        @include ease;
+      }
+
+      &-title {
+        font-size: 0.8571rem;
+        text-transform: uppercase;
+        color: $olive;
+        margin-bottom: 23px;
+      }
+
+      &-description {
+        font-family: $Constantia;
+        font-size: 1.1429rem;
+        line-height: 1.4;
+        color: $gray;
+      }
+
+      &:hover {
+        .project-page__team-item-logo {
+          opacity: .8;
+        }
+      }
+    }
+  }
+
+
+}

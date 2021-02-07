@@ -1,0 +1,72 @@
+.project {
+  grid-column: span 4;
+
+  &__picture {
+    width: 100%;
+    @include cv;
+
+    &::before {
+      content: "";
+      width: 1px;
+      margin-left: -1px;
+      float: left;
+      height: 0;
+      padding-top: 619px / 400px * 100%;
+    }
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  &__top {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  &__in {
+    @include ovl;
+    background-color: $olive;
+    opacity: 0;
+    @include ease;
+    @include flex-center;
+
+    &:hover {
+      opacity: 1;
+
+      .project__title {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2.8571rem;
+    text-transform: uppercase;
+    color: $white;
+    text-align: center;
+    opacity: 0;
+    @include ease;
+    transition-delay: .2s;
+  }
+
+  &__link {
+    font-size: 0.8571rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    &-arrow {
+      margin-left: 15px;
+      @include ease;
+    }
+
+    &:hover {
+      .project__link-arrow {
+        fill: $olive;
+      }
+    }
+  }
+}

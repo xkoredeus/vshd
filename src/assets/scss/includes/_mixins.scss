@@ -1,0 +1,40 @@
+@mixin ct {
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@mixin cv {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@mixin ovl {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+@mixin ease {
+  transition: .3s all ease;
+}
+@mixin cubic2 {
+  transition: all .3s cubic-bezier(.23,1,.32,1);
+}
+@mixin r($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content
+  }
+}
+@mixin rmin($width) {
+  @media only screen and (min-width: $width + "px") {
+    @content
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

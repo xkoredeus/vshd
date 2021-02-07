@@ -1,0 +1,246 @@
+.header {
+  position: relative;
+  margin-bottom: 5px;
+  z-index: 1;
+
+  @include r(768) {
+    margin-bottom: 0;
+  }
+
+  .layout__grid {
+    position: relative;
+
+    @include r(768) {
+      grid-row-gap: 20px;
+      grid-column-gap: 0;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    background-color: $olive;
+    border-radius: 50%;
+
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+    @include flex-center;
+
+    @include r(1200) {
+      padding: 15px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+
+  &__top {
+    grid-column: 2/13;
+    grid-row: 1/2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-column-gap: 10px;
+    grid-column: 3/13;
+
+    @include r(1200) {
+      position: absolute;
+      left: 0;
+      top: 111px;
+      width: 100%;
+      background-color: $white;
+      grid-column: 1/13;
+      grid-column-gap: 0;
+      grid-template-columns: 1fr;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 11;
+    }
+
+    &-link {
+      position: relative;
+      text-transform: uppercase;
+      grid-column: span 2;
+
+      @include r(1200) {
+        font-size: 3.0714rem;
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+
+      &--here {
+        @include r(1200) {
+          color: $olive;
+        }
+
+        @include rmin(1200) {
+          &::before {
+            position: absolute;
+            content: '';
+            width: 12px;
+            height: 12px;
+            left: -22px;
+            top: 1px;
+            background-color: $olive;
+            border-radius: 50%;
+            @include ease;
+
+            @include rmin(1466) {
+              width: 14px;
+              height: 14px;
+            }
+          }
+
+          &:hover {
+            &::before {
+              background-color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    grid-column: 5/13;
+    grid-row: 2/2;
+    align-self: flex-end;
+
+    @include r(1200) {
+      grid-column: 3/13;
+    }
+
+    @include r(768) {
+      grid-column: span 13;
+      grid-row: 3/4;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__buttons {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include r(1200) {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      align-items: flex-end;
+      grid-column-gap: 30px;
+    }
+  }
+
+  &__tel {
+    &-icon {
+      fill: $olive;
+    }
+  }
+
+  &__language {
+    color: $olive;
+    text-transform: uppercase;
+    padding: 0;
+
+    @include r(1200) {
+      align-self: flex-end;
+      line-height: 0.9;
+      position: relative;
+      bottom: -2px;
+    }
+  }
+
+  &__hamb {
+    position: relative;
+    width: 21px;
+    height: 17px;
+    padding: 0;
+
+    &-icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      fill: $black;
+      @include ease;
+
+      &--2 {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, -50%) scale(.5);
+      }
+    }
+  }
+}
+
+body.show-menu {
+  overflow-y: hidden;
+
+  .layout__overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header {
+    &__nav {
+      opacity: 1;
+      visibility: visible;
+
+      &-link {
+        opacity: 1;
+        transform: translateY(0);
+
+        &:nth-child(1) {
+          transition-delay: .2s;
+        }
+        &:nth-child(2) {
+          transition-delay: .3s;
+        }
+        &:nth-child(3) {
+          transition-delay: .4s;
+        }
+        &:nth-child(4) {
+          transition-delay: .5s;
+        }
+        &:nth-child(5) {
+          transition-delay: .6s;
+        }
+      }
+    }
+
+    &__hamb {
+      &-icon {
+        &--1 {
+          transform: translate(-50%, -50%) scale(.5);
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        &--2 {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    //&__nav,
+    //&__button {
+    //  opacity: 1;
+    //  visibility: visible;
+    //  transform: translate(-50%, 0);
+    //}
+
+  }
+}

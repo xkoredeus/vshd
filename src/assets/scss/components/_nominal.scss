@@ -1,0 +1,258 @@
+.nominal {
+  .layout__grid {
+    @include r(768) {
+      grid-row-gap: 30px;
+    }
+
+    @include r(576) {
+      grid-row-gap: 150px;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    height: 100%;
+    @include cv;
+
+    &--circle {
+      border-radius: 50%;
+    }
+
+    &-wrapper {
+      grid-column: 1/9;
+      grid-row: 1/3;
+
+      @include r(1200) {
+        grid-column: 1/7;
+      }
+
+      @include r(768) {
+        grid-row: auto;
+      }
+
+      @include r(576) {
+        grid-column: span 13;
+        margin-top: -140px;
+      }
+
+      &::before {
+        content: "";
+        width: 1px;
+        margin-left: -1px;
+        float: left;
+        height: 0;
+        padding-top: 662px / 813px * 100%;
+      }
+
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      &--circle {
+        &::before {
+          padding-top: 714px / 714px * 100%;
+        }
+      }
+    }
+  }
+
+  &__info {
+    grid-column: 9/13;
+    grid-row: 1/2;
+
+    @include r(1200) {
+      grid-column: 7/13;
+    }
+
+    @include r(768) {
+      grid-column: 1/13;
+      //grid-row: auto;
+      order: 1;
+    }
+  }
+
+  //&__title {
+  //  @include r(1200) {
+  //    margin-bottom: 57px;
+  //  }
+  //}
+
+  .button--circle {
+    grid-column: 9/13;
+    grid-row: 2/3;
+    align-self: flex-end;
+
+    @include r(1200) {
+      grid-column: 7/11;
+    }
+
+    @include r(768) {
+      grid-column: 7/13;
+    }
+
+    @include r(576) {
+      grid-column: span 13;
+    }
+  }
+
+  &--rtl {
+    .nominal {
+      &__info {
+        grid-column: 1/6;
+        grid-row: 1/2;
+
+        @include r(768) {
+          grid-column: 1/13;
+          grid-row: 1;
+        }
+      }
+
+      &__picture {
+        &-wrapper {
+          grid-column: 6/13;
+
+          @include r(768) {
+            grid-row: auto;
+            grid-column: 7/13;
+          }
+
+          @include r(576) {
+            grid-column: span 13;
+            margin-top: -140px;
+          }
+        }
+      }
+    }
+
+    .button--circle {
+      grid-column: 1/6;
+      grid-row: 2/3;
+
+      @include r(768) {
+        grid-row: auto;
+        grid-column: 1/7;
+      }
+
+      @include r(576) {
+        grid-column: span 13;
+      }
+    }
+  }
+
+  &--tight {
+    &__info {
+      grid-column: 1/5;
+    }
+
+    &__right {
+      grid-column: 5/13;
+
+      &-description {
+        grid-column: span 7;
+      }
+    }
+
+    &--rtl {
+      .nominal--tight__info {
+        grid-column: 9/13;
+      }
+
+      .nominal--tight__right {
+        grid-column: 1/9;
+      }
+
+      .about__section-button {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    &__picture {
+      @include cv;
+
+      &::before {
+        content: "";
+        width: 1px;
+        margin-left: -1px;
+        float: left;
+        height: 0;
+        padding-top: 662px / 1226px * 100%;
+      }
+
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+
+    &__small-picture {
+      width: 100%;
+      height: 100%;
+      @include cv;
+
+      &::before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+
+      &--circle {
+        border-radius: 50%;
+      }
+
+      &-wrapper {
+        &--olive {
+          background-color: $olive;
+        }
+      }
+    }
+
+    &__subscribe-picture {
+      @include cv;
+
+      &::before {
+        content: "";
+        width: 1px;
+        margin-left: -1px;
+        float: left;
+        height: 0;
+        padding-top: 399px / 813.5px * 100%;
+      }
+
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+  }
+
+  &__text {
+    font-family: $Constantia;
+    font-size: 1.1429rem;
+    line-height: 1.3;
+    color: $gray;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__promo {
+    &-in {
+      font-family: $Constantia;
+      font-size: 2.8571rem;
+      text-align: center;
+      color: $dark;
+      align-self: center;
+    }
+
+    &-title {
+      grid-column: 1/4;
+      margin-top: 15px;
+    }
+  }
+}

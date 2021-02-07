@@ -1,0 +1,62 @@
+.footer {
+  padding: 32px 0 16px;
+
+  .layout__grid {
+    grid-row-gap: 60px;
+
+    @include r(960) {
+      grid-row-gap: 30px;
+    }
+
+    @include r(768) {
+      grid-row-gap: 45px;
+    }
+  }
+
+  &__item {
+    grid-row: 1/2;
+    grid-column: span 4;
+
+    @include r(960) {
+      grid-column: span 6;
+      grid-row: auto
+    }
+
+    @include r(768) {
+      grid-column: span 13;
+    }
+  }
+
+  &__link {
+    font-size: 3.0714rem;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  &__copyrights {
+    font-family: $Circe;
+    font-size: 1.0714rem;
+    text-transform: uppercase;
+    grid-column: 1/5;
+
+    @include r(576) {
+      grid-column: span 13;
+    }
+  }
+
+  &__subtitle {
+    font-size: 0.7143rem;
+    text-transform: uppercase;
+    grid-column: 5/11;
+
+    @include r(960) {
+      grid-column: 5/13;
+    }
+
+    @include r(576) {
+      grid-column: span 13;
+    }
+  }
+}
