@@ -1,0 +1,88 @@
+#cursor {
+  position: fixed;
+  z-index: 1109;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  will-change: transform;
+  mix-blend-mode: multiply;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor__circle {
+    width: 39px;
+    height: 39px;
+    margin-top: -50%;
+    margin-left: -50%;
+    border-radius: 50%;
+    background-color: $olive;
+    //border: solid 1px rgba(227, 222, 193, 0.64);
+    transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    background-color 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    border-color 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    width 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    height 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  #cursor {
+    &.cursor--interactive {
+      .cursor__circle {
+        @include interactive;
+      }
+    }
+
+    &.cursor--dark-button {
+      animation: changeMixBlendMode .5s ease;
+      animation-delay: .5s;
+      mix-blend-mode: normal;
+
+      .cursor__circle {
+        @include interactive;
+      }
+    }
+
+    &.cursor--light-button {
+      animation: changeMixBlendMode .5s ease;
+      animation-delay: .5s;
+
+      .cursor__circle {
+        background-color: $dark;
+        @include interactive;
+      }
+    }
+
+    &.cursor--dark-interactive {
+      .cursor__circle {
+        background-color: $dark;
+        @include interactive;
+      }
+    }
+
+    &.cursor--dark-not-interactive {
+      mix-blend-mode: normal;
+    }
+
+    &.cursor--interactive-drag {
+      .cursor__circle {
+        position: relative;
+        @include interactive;
+
+        //&::before,
+        //&::after {
+        //  content: '';
+        //  position: absolute;
+        //  width: 5px;
+        //  height: 5px;
+        //  top: 50%;
+        //  background-color: $dark;
+        //}
+      }
+    }
+  }
+}
+
+@keyframes changeMixBlendMode {
+  to {
+    mix-blend-mode: normal;
+  }
+}

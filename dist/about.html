@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#D9C557">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>New Project</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <style>
+        /*.preloader__wrp {*/
+        /*    position: fixed;*/
+        /*    left: 0;*/
+        /*    top: 0;*/
+        /*    height: 100vh;*/
+        /*    min-height: 300px;*/
+        /*    width: 100vw;*/
+        /*    background-color: #fff;*/
+        /*    display: -webkit-box;*/
+        /*    display: -ms-flexbox;*/
+        /*    display: flex;*/
+        /*    -webkit-box-pack: center;*/
+        /*    -ms-flex-pack: center;*/
+        /*    justify-content: center;*/
+        /*    -webkit-box-align: center;*/
+        /*    -ms-flex-align: center;*/
+        /*    align-items: center;*/
+        /*    z-index: 100;*/
+        /*}*/
+    
+        /*.preloader {*/
+        /*    display: block;*/
+        /*    position: absolute;*/
+        /*    top: 50%;*/
+        /*    left: 50%;*/
+        /*    height: 50px;*/
+        /*    width: 50px;*/
+        /*    margin: -25px 0 0 -25px;*/
+        /*}*/
+    
+        /*.preloader span {*/
+        /*    position: absolute;*/
+        /*    width: 10px;*/
+        /*    height: 10px;*/
+        /*    border-radius: 50%;*/
+        /*    background-color: #D9C557;*/
+        /*    -webkit-animation: preloader 1.7s infinite ease-in-out both;*/
+        /*    animation: preloader 1.7s infinite ease-in-out both;*/
+        /*    margin-right: 5px;*/
+        /*}*/
+    
+        /*.preloader span:nth-child(1) {*/
+        /*    left: 0;*/
+        /*    -webkit-animation-delay: 0.6s;*/
+        /*    animation-delay: 0.6s;*/
+        /*}*/
+    
+        /*.preloader span:nth-child(2) {*/
+        /*    left: 15px;*/
+        /*    -webkit-animation-delay: 0.4s;*/
+        /*    animation-delay: 0.4s;*/
+        /*}*/
+    
+        /*.preloader span:nth-child(3) {*/
+        /*    left: 30px;*/
+        /*    -webkit-animation-delay: 0.2s;*/
+        /*    animation-delay: 0.2s;*/
+        /*}*/
+    
+        /*.preloader span:nth-child(4) {*/
+        /*    left: 45px;*/
+        /*    -webkit-animation-delay: 0.1s;*/
+        /*    animation-delay: 0.1s;*/
+        /*}*/
+    
+        /*@-webkit-keyframes preloader {*/
+        /*    0%, 80%, 100% {*/
+        /*        -webkit-transform: scale(0);*/
+        /*        transform: scale(0);*/
+        /*        transform: scale(0);*/
+        /*        opacity: 0;*/
+        /*    }*/
+        /*    40% {*/
+        /*        -webkit-transform: scale(1);*/
+        /*        transform: scale(1);*/
+        /*        transform: scale(1);*/
+        /*        opacity: 1;*/
+        /*    }*/
+        /*}*/
+    
+        /*@keyframes preloader {*/
+        /*    0%, 80%, 100% {*/
+        /*        -webkit-transform: scale(0);*/
+        /*        transform: scale(0);*/
+        /*        transform: scale(0);*/
+        /*        opacity: 0;*/
+        /*    }*/
+        /*    40% {*/
+        /*        -webkit-transform: scale(1);*/
+        /*        transform: scale(1);*/
+        /*        transform: scale(1);*/
+        /*        opacity: 1;*/
+        /*    }*/
+        /*}*/
+    </style>
+    <div class="preloader__wrapper">
+        <div class="preloader__overlay"></div>
+        <div class="preloader__first-text js-preloader-first-text">Human oriented development</div>
+        <div class="preloader__text-base">
+            <div class="preloader__text">
+                <div class="preloader__text-decoration preloader__text-decoration--1"></div>
+                <svg width="101" height="15" class="preloader__text-icon" viewBox="0 0 101 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M36.5096 4.74805C34.6658 4.74805 33.1582 5.93379 33.1582 7.39317C33.1582 9.42009 34.9103 9.76467 36.4688 10.0586C37.9765 10.3525 39.1581 10.5754 39.1581 11.974C39.1581 13.0381 37.9765 13.9097 36.5198 13.9097C35.0631 13.9097 33.8814 13.0381 33.8814 11.974V11.8727H33.1684V11.974C33.1684 13.4334 34.676 14.6191 36.5198 14.6191C38.3737 14.6191 39.8813 13.4334 39.8813 11.974C39.8813 9.98763 38.1496 9.65319 36.6115 9.35929C35.0835 9.06538 33.8814 8.83229 33.8814 7.39317C33.8814 6.32904 35.0631 5.45747 36.5198 5.45747C37.9765 5.45747 39.1581 6.32904 39.1581 7.39317V7.49452H39.8712V7.39317C39.861 5.94393 38.3534 4.74805 36.5096 4.74805Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                    <path d="M21.2397 4.74805C18.5097 4.74805 16.2891 6.95739 16.2891 9.67345C16.2891 12.3895 18.5097 14.5989 21.2397 14.5989C23.9697 14.5989 26.1904 12.3895 26.1904 9.67345C26.1904 6.95739 23.9697 4.74805 21.2397 4.74805ZM21.2397 13.8894C18.907 13.8894 17.0021 11.9943 17.0021 9.67345C17.0021 7.35263 18.907 5.45747 21.2397 5.45747C23.5725 5.45747 25.4773 7.35263 25.4773 9.67345C25.4773 12.0044 23.5725 13.8894 21.2397 13.8894Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                    <path d="M78.7847 4.74805C76.0547 4.74805 73.834 6.95739 73.834 9.67345C73.834 12.3895 76.0547 14.5989 78.7847 14.5989C81.5147 14.5989 83.7354 12.3895 83.7354 9.67345C83.7354 6.95739 81.5147 4.74805 78.7847 4.74805ZM78.7847 13.8894C76.4519 13.8894 74.547 11.9943 74.547 9.67345C74.547 7.35263 76.4418 5.45747 78.7847 5.45747C81.1174 5.45747 83.0223 7.35263 83.0223 9.67345C83.0223 12.0044 81.1174 13.8894 78.7847 13.8894Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                    <path d="M62.4435 4.7181C61.0785 4.7181 59.8052 5.39713 59.0412 6.51193V0.350098H58.3281V14.3662H59.0412V8.81248C59.0412 6.94772 60.5692 5.42753 62.4435 5.42753C64.3178 5.42753 65.8458 6.94772 65.8458 8.81248V14.346H66.5589V8.81248C66.5589 6.5626 64.7151 4.7181 62.4435 4.7181Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                    <path d="M4.89955 13.0078L1.62965 5.00146H0.855469L4.68563 14.376H5.10328L8.93345 5.00146H8.16945L4.89955 13.0078Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                    <path d="M49.5177 0.350098H48.8047V5.03227H49.5177V0.350098Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                    <path d="M99.8602 7.1399C98.9638 5.66025 97.3747 4.74814 95.6226 4.74814C92.8926 4.74814 90.6719 6.95748 90.6719 9.67355C90.6719 12.3896 92.8926 14.599 95.6226 14.599C97.3747 14.599 98.9638 13.697 99.8602 12.2072V14.3659H100.573V0.359863H99.8602V7.1399ZM95.6226 13.8896C93.2898 13.8896 91.3849 11.9944 91.3849 9.67355C91.3849 7.35273 93.2898 5.45756 95.6226 5.45756C97.9553 5.45756 99.8602 7.35273 99.8602 9.67355C99.8602 12.0045 97.9553 13.8896 95.6226 13.8896Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                </svg>
+                <div class="preloader__text-decoration preloader__text-decoration--2"></div>
+            </div>
+        </div>
+    
+        <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!--<div id="cursor">-->
+    <!--    <div class="cursor__circle"></div>-->
+    <!--</div>-->
+
+    <div class="layout">
+        <div class="layout__overlay"></div>
+        <div class="layout__in">
+            <header class="header">
+                <div class="layout__grid">
+                    <a class="header__logo" href="index.html" cursor-class="cursor--light-button">
+                        <svg class="header__logo-icon" width="61" height="9">
+                            <use xlink:href="#logo-title"></use>
+                        </svg>
+                    </a>
+                    <div class="header__nav">
+                        <div class="header__nav-item">
+                            <a class="header__nav-link" cursor-class="cursor--interactive" href="projects.html">проекты</a>
+                        </div>
+                        <div class="header__nav-item">
+                            <a class="header__nav-link" cursor-class="cursor--interactive" href="news.html">пресс-центр</a>
+                        </div>
+                        <div class="header__nav-item">
+                            <a class="header__nav-link header__nav-link--here" cursor-class="cursor--interactive" href="about.html">о компании</a>
+                        </div>
+                        <div class="header__nav-item">
+                            <a class="header__nav-link" cursor-class="cursor--interactive" href="partners.html">партнеры</a>
+                        </div>
+                        <div class="header__nav-item">
+                            <a class="header__nav-link" cursor-class="cursor--interactive" href="contacts.html">Контакты</a>
+                        </div>
+                    </div>
+                    <div class="header__buttons">
+                        <a class="header__tel d-xl-none" href="tel:7 4951509999">
+                            <svg class="header__tel-icon" width="18" height="17">
+                                <use xlink:href="#telephone"></use>
+                            </svg>
+                        </a>
+                        <button class="header__language" cursor-class="cursor--interactive">Eng</button>
+                        <button class="header__hamb d-xl-none js-toggle-menu" type="button">
+                            <span class="header__hamb-icon header__hamb-icon--1">
+                                <svg width="21" height="17">
+                                    <use xlink:href="#hamburger"></use>
+                                </svg>
+                            </span>
+                            <span class="header__hamb-icon header__hamb-icon--2">
+                                <svg width="16" height="16">
+                                    <use xlink:href="#cross"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="header__bottom">
+                        <h1 class="header__title section__title--big">О компании</h1>
+                    </div>
+                </div>
+            </header>
+            <main class="layout__main">
+                <section class="section--inner">
+                    <div class="nominal--tight__picture-wrapper">
+                        <div class="nominal--tight__picture" style="background-image: url('assets/img/about__picture--1.jpg');"></div>
+                    </div>
+                </section>
+                <section class="project-page__begin nominal--tight section--inner">
+                    <div class="layout__grid">
+                        <div class="nominal--tight__info">
+                            <div class="section__title--small">о Vos'hod</div>
+                        </div>
+                        <div class="nominal--tight__right-description">
+                            <p class="nominal__text">Созданная одним из крупнейших собственников офисной недвижимости класса A в Москве – Riverstretch Trading & Investments (RT&I) в 2019 г., компания Vos’hod специализируется преимущественно на девелопменте жилых проектов элитного уровня, а также знаковых проектах мультифункционального назначения.</p>
+                
+                            <p class="nominal__text">Vos'hod несет новое отношение к девелопменту недвижимости. Компания привлекает ведущих ведущих и звездных специалистов с глобальной экспертизой и пониманием современных тенденций для создания проектов, органично вписанных в городскую среду и созданных с применением современных технологий в инженерии и строительстве.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="marquee">
+                    <div class="marquee__in"></div>
+                    <marquee class="marquee__text" behavior="scroll" direction="left" scrollamount="15" loop="infinite">Дэвид чиперфилд</marquee>
+                </section>
+                <section class="section--wide nominal--tight">
+                    <div class="layout__grid">
+                        <div class="nominal--tight__info">
+                            <div class="nominal--tight__small-picture-wrapper nominal--tight__small-picture-wrapper--olive">
+                                <div class="nominal--tight__small-picture nominal--tight__small-picture--circle" style="background-image: url(assets/img/about__picture--2.jpg);"></div>
+                            </div>
+                        </div>
+                        <div class="nominal--tight__right">
+                            <div class="nominal--tight__subscribe-picture-wrapper">
+                                <div class="nominal--tight__subscribe-picture" style="background-image: url(assets/img/about__picture--3.jpg);"></div>
+                            </div>
+                        </div>
+                        <div class="nominal--tight__info"></div>
+                        <div class="nominal--tight__right-description mt-2 mt-xl-3">
+                            <p class="nominal__text">Созданная одним из крупнейших собственников офисной недвижимости класса A в Москве – Riverstretch Trading & Investments (RT&I) в 2019 г., компания Vos’hod специализируется преимущественно на девелопменте жилых проектов элитного уровня, а также знаковых проектах мультифункционального назначения.</p>
+                
+                            <p class="nominal__text">Vos'hod несет новое отношение к девелопменту недвижимости. Компания привлекает ведущих ведущих и звездных специалистов с глобальной экспертизой и пониманием современных тенденций для создания проектов, органично вписанных в городскую среду и созданных с применением современных технологий в инженерии и строительстве.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="section--wide nominal--tight">
+                    <div class="layout__grid">
+                        <div class="nominal--tight__info">
+                            <div class="nominal--tight__small-picture-wrapper">
+                                <div class="nominal--tight__small-picture nominal--tight__small-picture--circle" style="background-image: url(assets/img/about__picture--4.jpg);"></div>
+                            </div>
+                        </div>
+                        <div class="nominal--tight__right nominal__promo-in">«Наша цель-создавать проекты безупречного образа жизни, в которых продуманы не только дизайн и архитектура, но и паттерны использования пространства»  </div>
+                        <div class="nominal__promo-title section__title--small">Марина Руднева <br><span class="olive">cо-основатель Vos'hod</span></div>
+                    </div>
+                </section>
+                <section class="section--wide nominal--tight">
+                    <div class="about__section-in">
+                        <div class="section__title--big">LIFESTYLE</div>
+                        <div class="layout__grid">
+                            <div class="nominal--tight__info">
+                                <div class="nominal--tight__small-picture-wrapper nominal--tight__small-picture-wrapper--olive">
+                                    <div class="nominal--tight__small-picture nominal--tight__small-picture--circle" style="background-image: url(assets/img/about__picture--5.jpg);"></div>
+                                </div>
+                            </div>
+                            <div class="nominal--tight__right">
+                                <div class="nominal--tight__subscribe-picture-wrapper">
+                                    <div class="nominal--tight__subscribe-picture" style="background-image: url(assets/img/about__picture--6.jpg);"></div>
+                                </div>
+                            </div>
+                            <div class="nominal--tight__info"></div>
+                            <div class="nominal--tight__right">
+                                <div class="section__title--medium">Продуманная инфраструктура и безупречный сервис</div>
+                            </div>
+                            <div class="nominal--tight__info"></div>
+                            <div class="nominal--tight__right-description">
+                                <p class="nominal__text">Особая, неповторимая атмосфера – отличительная черта наших проектов. Для этого мы привлекаем мировые бренды из мира моды, искусства и новых медиа. Разработка дизайна интерьеров и декора личных и общественных пространств, фирменная инфраструктура и обширные возможности партнерской программы брендов обеспечивают ежедневные впечатления.</p>
+                                <p class="nominal__text">Круглосуточный индивидуальный сервис уровня отеля 5* и разделение потоков резидентов и обслуживающего персонала делает пребывание в доме поистине безупречным. </p>
+                            </div>
+                        </div>
+                        <button class="about__section-button" cursor-class="cursor--interactive">
+                            <span class="about__section-button-in">
+                                <svg class="about__section-button-arrow" width="14" height="8">
+                                    <use xlink:href="#arrow--right"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </section>
+                <section class="section--wide nominal--tight nominal--tight--rtl">
+                    <div class="about__section-in">
+                        <div class="section__title--big">ЭСТЕТИКА ПРОСТРАНСТВ</div>
+                        <div class="layout__grid">
+                            <div class="nominal--tight__right">
+                                <div class="nominal--tight__subscribe-picture-wrapper">
+                                    <div class="nominal--tight__subscribe-picture" style="background-image: url(assets/img/about__picture--7.jpg);"></div>
+                                </div>
+                            </div>
+                            <div class="nominal--tight__info">
+                                <div class="nominal--tight__small-picture-wrapper nominal--tight__small-picture-wrapper--olive">
+                                    <div class="nominal--tight__small-picture nominal--tight__small-picture--circle" style="background-image: url(assets/img/about__picture--8.jpg);"></div>
+                                </div>
+                            </div>
+                            <div class="nominal--tight__right">
+                                <div class="section__title--medium">Высококлассная архитектура и исключительный дизайн интерьеров</div>
+                            </div>
+                            <div class="nominal--tight__info"></div>
+                            <div class="nominal--tight__right-description">
+                                <p class="nominal__text">Мы создаем недвижимость для тех, кто ценит безупречный дизайн, высокое мастерство и прекрасную обстановку. В каждый из наших проектов мы вкладываем истинное определение качества, от изысканной архитектуры и ландшафтного дизайна территории до индивидуальной отделки и продуманных планировок.</p>
+                                <p class="nominal__text">Совершенство проистекает из нашего стремления работать с талантливыми профессионалами. Мы сотрудничаем со всемирно известными архитекторами, дизайнерами, консультантами  и операторами, потому что верим – эстетика является нематериальным фактором, который напрямую. Влияет на качество нашей повседневной жизни, а также отличает хорошую недвижимость.</p>
+                            </div>
+                            <div class="nominal--tight__info"></div>
+                        </div>
+                        <button class="about__section-button" cursor-class="cursor--interactive">
+                            <span class="about__section-button-in">
+                                <svg class="about__section-button-arrow" width="14" height="8">
+                                    <use xlink:href="#arrow--right"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </section>
+                <section class="about__last-section section--wide nominal--tight pb-0">
+                    <div class="about__section-in">
+                        <div class="section__title--big">ОСОЗНАННОЕ ПОТРЕБЛЕНИЕ</div>
+                        <div class="layout__grid">
+                            <div class="nominal--tight__info">
+                                <div class="nominal--tight__small-picture-wrapper nominal--tight__small-picture-wrapper--olive">
+                                    <div class="nominal--tight__small-picture nominal--tight__small-picture--circle" style="background-image: url(assets/img/about__picture--9.jpg);"></div>
+                                </div>
+                            </div>
+                            <div class="nominal--tight__right">
+                                <div class="nominal--tight__subscribe-picture-wrapper">
+                                    <div class="nominal--tight__subscribe-picture" style="background-image: url(assets/img/about__picture--10.jpg);"></div>
+                                </div>
+                            </div>
+                            <div class="nominal--tight__info"></div>
+                            <div class="nominal--tight__right">
+                                <div class="section__title--medium">Современные технологии, повторное использование и «зеленая» сертификация</div>
+                            </div>
+                            <div class="nominal--tight__info"></div>
+                            <div class="nominal--tight__right-description">
+                                <p class="nominal__text">Мы считаем необходимым сокращать вредное воздействие городской среды на окружающую природу. Уже на этапе проектирования мы активно внедряем стандарты экологической эффективности в своих проектах, а также поддерживаем пользователей экологических видов транспорта (велосипедов).</p>
+                                <p class="nominal__text">Во главу угла мы ставим социальные аспекты для обеспечения здоровья и благополучия человека в наших проектах, поэтому помимо экологических инициатив мы работаем над внедрением стандартов WELL/ Fitwell, учитывающих биоритмы и циркадные ритмы человека. </p>
+                                <p class="nominal__text">Уникальность нашего портфолио заключается как в создании. Так и в сохранении архитектурных ценностей. Реставрация исторического наследия в совокупности с технологической модернизацией позволяет создать поистине уникальные проекты и подарить новую жизнь объектам с потерянной функцией, стимулируя ревитализацию городских территорий.</p>
+                            </div>
+                        </div>
+                        <button class="about__section-button" cursor-class="cursor--interactive">
+                            <span class="about__section-button-in">
+                                <svg class="about__section-button-arrow" width="14" height="8">
+                                    <use xlink:href="#arrow--right"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </section>
+                
+            </main>
+            <footer class="footer">
+                <div class="layout__grid">
+                    <div class="footer__item">
+                        <div class="footer__link-wrapper">
+                            <a class="footer__link" cursor-class="cursor--interactive" href="contacts.html">контакты</a>
+                        </div>
+                        <div class="footer__link-wrapper">
+                            <a class="footer__link" cursor-class="cursor--interactive" href="mailto: hello@voshodmoscow.ru">e-mail</a>
+                        </div>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__link-wrapper">
+                            <a class="footer__link" cursor-class="cursor--interactive" href="#">facebook</a>
+                        </div>
+                        <div class="footer__link-wrapper">
+                            <a class="footer__link" cursor-class="cursor--interactive" href="#">instagramm</a>
+                        </div>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__link-wrapper">
+                            <a class="footer__link" cursor-class="cursor--interactive" href="tel:74951509999">+7<br>495 150 99 99</a>
+                        </div>
+                    </div>
+                    <div class="footer__copyrights d-flex align-items-center">© <span class="ml-1 mt-1 d-inline-block">2021 Vos'hod</span></div>
+                    <div class="footer__subtitle">Эта веб-страница носит исключительно информационный характер и не является публичной офертой, определяемой положениями статьи 437 ГК РФ</div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <svg width="0" height="0" class="svg-sprite">
+        <symbol id="logo-title" viewBox="0 0 61 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.35 2.84033C22.4751 2.84033 21.7598 3.40655 21.7598 4.10342C21.7598 5.07131 22.5911 5.23585 23.3306 5.3762C24.046 5.51654 24.6067 5.62301 24.6067 6.29085C24.6067 6.79899 24.046 7.21518 23.3548 7.21518C22.6636 7.21518 22.1029 6.79899 22.1029 6.29085V6.24245H21.7646V6.29085C21.7646 6.98773 22.4799 7.55394 23.3548 7.55394C24.2345 7.55394 24.9498 6.98773 24.9498 6.29085C24.9498 5.34232 24.1281 5.18262 23.3983 5.04228C22.6733 4.90193 22.1029 4.79062 22.1029 4.10342C22.1029 3.59528 22.6636 3.17909 23.3548 3.17909C24.046 3.17909 24.6067 3.59528 24.6067 4.10342V4.15182H24.945V4.10342C24.9402 3.41139 24.2248 2.84033 23.35 2.84033Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+            <path d="M16.1049 2.84033C14.8095 2.84033 13.7559 3.89533 13.7559 5.1923C13.7559 6.48927 14.8095 7.54426 16.1049 7.54426C17.4003 7.54426 18.4539 6.48927 18.4539 5.1923C18.4539 3.89533 17.4003 2.84033 16.1049 2.84033ZM16.1049 7.2055C14.998 7.2055 14.0942 6.30053 14.0942 5.1923C14.0942 4.08407 14.998 3.17909 16.1049 3.17909C17.2118 3.17909 18.1156 4.08407 18.1156 5.1923C18.1156 6.30537 17.2118 7.2055 16.1049 7.2055Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+            <path d="M43.4086 2.84033C42.1133 2.84033 41.0596 3.89533 41.0596 5.1923C41.0596 6.48927 42.1133 7.54426 43.4086 7.54426C44.704 7.54426 45.7577 6.48927 45.7577 5.1923C45.7577 3.89533 44.704 2.84033 43.4086 2.84033ZM43.4086 7.2055C42.3018 7.2055 41.3979 6.30053 41.3979 5.1923C41.3979 4.08407 42.2969 3.17909 43.4086 3.17909C44.5155 3.17909 45.4193 4.08407 45.4193 5.1923C45.4193 6.30537 44.5155 7.2055 43.4086 7.2055Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+            <path d="M35.6558 2.82603C35.0082 2.82603 34.404 3.15027 34.0415 3.68261V0.740234H33.7031V7.43317H34.0415V4.78116C34.0415 3.89071 34.7665 3.16479 35.6558 3.16479C36.5452 3.16479 37.2702 3.89071 37.2702 4.78116V7.42349H37.6085V4.78116C37.6085 3.70681 36.7337 2.82603 35.6558 2.82603Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+            <path d="M8.35149 6.78458L6.79996 2.96143H6.43262L8.24999 7.43791H8.44816L10.2655 2.96143H9.90302L8.35149 6.78458Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+            <path d="M29.5229 0.740234H29.1846V2.97605H29.5229V0.740234Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+            <path d="M0.343175 0H0V8.19318H0.343175H0.681516H1.01986V0H0.681516H0.343175Z" fill="white"/>
+            <path d="M60.0214 0H59.6831H59.3447V8.19318H59.6831H60.0214H60.3597V0H60.0214Z" fill="white"/>
+            <path d="M53.4086 3.9827C52.9832 3.27614 52.2292 2.84059 51.3979 2.84059C50.1025 2.84059 49.0488 3.89559 49.0488 5.19256C49.0488 6.48953 50.1025 7.54453 51.3979 7.54453C52.2292 7.54453 52.9832 7.11382 53.4086 6.40242V7.43322H53.7469V0.745117H53.4086V3.9827ZM51.3979 7.20577C50.291 7.20577 49.3872 6.30079 49.3872 5.19256C49.3872 4.08433 50.291 3.17936 51.3979 3.17936C52.5047 3.17936 53.4086 4.08433 53.4086 5.19256C53.4086 6.30563 52.5047 7.20577 51.3979 7.20577Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+        </symbol>
+    
+        <symbol id="arrow--right" viewBox="0 0 15 8" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.3536 4.36332C14.5488 4.16806 14.5488 3.85147 14.3536 3.65621L11.1716 0.474232C10.9763 0.27897 10.6597 0.27897 10.4645 0.474232C10.2692 0.669494 10.2692 0.986076 10.4645 1.18134L13.2929 4.00977L10.4645 6.83819C10.2692 7.03345 10.2692 7.35004 10.4645 7.5453C10.6597 7.74056 10.9763 7.74056 11.1716 7.5453L14.3536 4.36332ZM0.1875 4.50977H14V3.50977H0.1875V4.50977Z"/>
+        </symbol>
+    
+        <symbol id="document" viewBox="0 0 32 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.5 1V43H0.75V11L10.75 1H31.5Z" fill="#D9C557"/>
+            <path d="M0.75 11V43H31.5V1H10.75M0.75 11L10.75 1M0.75 11H10.75V1" stroke="white"/>
+        </symbol>
+    
+        <symbol id="telephone" viewBox="0 0 18 17" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.8648 12.7977C16.8219 12.7547 16.6878 12.658 16.4624 12.5076C16.2371 12.3572 15.9742 12.1826 15.6737 11.9839L14.7724 11.3876L13.9676 10.8558L13.5169 10.5737C13.474 10.5415 13.423 10.5147 13.364 10.4932C13.305 10.4717 13.2459 10.4556 13.1869 10.4448C13.1279 10.4341 13.0662 10.4287 13.0018 10.4287C12.9589 10.4287 12.9213 10.4314 12.8891 10.4368C12.857 10.4421 12.8221 10.4475 12.7845 10.4529C12.747 10.4582 12.7067 10.4663 12.6638 10.477C12.6209 10.4878 12.5806 10.4985 12.5431 10.5093C12.5055 10.52 12.468 10.5335 12.4304 10.5496C12.3929 10.5657 12.3526 10.5818 12.3097 10.5979C12.2668 10.614 12.2292 10.6328 12.197 10.6543C11.9931 10.7618 11.5049 11.0357 10.7323 11.4762C10.0777 11.0142 9.26222 10.2944 8.28574 9.31672C7.31999 8.34979 6.60641 7.53864 6.145 6.88327C6.58495 6.09897 6.85858 5.61013 6.96589 5.41675C7.24488 4.87956 7.27171 4.4337 7.04637 4.07915C6.92833 3.89651 6.55008 3.32172 5.91161 2.35478C5.27314 1.38785 4.91099 0.845288 4.82514 0.727107C4.64272 0.469257 4.36373 0.340332 3.98816 0.340332C3.89158 0.340332 3.79769 0.351076 3.70648 0.372563C3.61527 0.394051 3.52406 0.423596 3.43285 0.461199C3.34164 0.498802 3.25312 0.544463 3.16727 0.598182C3.11362 0.641157 3.02509 0.710991 2.90169 0.807685C2.77829 0.904378 2.57978 1.06822 2.30615 1.29921C2.03252 1.5302 1.7884 1.75582 1.57379 1.97607C1.35918 2.19631 1.16603 2.43805 0.994337 2.70127C0.822648 2.96449 0.742169 3.19279 0.7529 3.38618C0.76363 3.83742 0.84411 4.31283 0.994337 4.81241C1.14456 5.312 1.34845 5.80889 1.60598 6.30311C1.86351 6.79732 2.15055 7.28616 2.4671 7.76963C2.78366 8.25309 3.14045 8.73656 3.53748 9.22003C3.93451 9.7035 4.31544 10.1467 4.68028 10.5496C5.04512 10.9525 5.43142 11.358 5.83918 11.7663C6.47228 12.4002 7.10538 12.9884 7.73849 13.531C8.37159 14.0735 9.06102 14.6053 9.8068 15.1264C10.5526 15.6475 11.3091 16.0638 12.0763 16.3754C12.8435 16.6869 13.5652 16.8535 14.2412 16.8749H14.2573C14.4397 16.8749 14.6597 16.789 14.9172 16.6171C15.1748 16.4452 15.4135 16.2491 15.6335 16.0289C15.8535 15.8086 16.0788 15.5669 16.3095 15.3037C16.5402 15.0404 16.7039 14.8444 16.8004 14.7154L16.9936 14.4576C17.3262 13.9849 17.3745 13.5336 17.1384 13.1039C17.0633 12.975 16.9721 12.8729 16.8648 12.7977ZM16.1566 13.8452C15.8347 14.2964 15.4752 14.7235 15.0782 15.1264C14.6811 15.5293 14.3914 15.7683 14.209 15.8435C13.2433 15.7898 12.1031 15.352 10.7886 14.5301C9.47415 13.7082 8.06845 12.5452 6.57154 11.0411C5.07463 9.53697 3.91305 8.12685 3.08679 6.81075C2.26054 5.49464 1.82595 4.35849 1.78303 3.4023C1.84742 3.21965 2.0808 2.92957 2.4832 2.53205C2.8856 2.13454 3.31213 1.77462 3.76282 1.45231C3.78428 1.43082 3.80574 1.41471 3.8272 1.40396C3.84866 1.39322 3.87281 1.38516 3.89963 1.37979C3.92646 1.37442 3.95597 1.37173 3.98816 1.37173C3.99889 1.37173 4.00962 1.3771 4.02035 1.38785C4.66418 2.31181 5.3724 3.38081 6.145 4.59485C6.145 4.6808 6.11281 4.79361 6.04842 4.93328C6.02696 4.96551 6.00014 5.01386 5.96795 5.07832C5.93575 5.14278 5.89551 5.21799 5.84723 5.30394C5.79894 5.38989 5.7426 5.48658 5.67822 5.59402C5.61384 5.70146 5.54677 5.81964 5.47702 5.94856C5.40727 6.07749 5.32948 6.21716 5.24363 6.36757L4.92172 6.93161L5.29192 7.46343C5.79626 8.18326 6.55276 9.04813 7.56143 10.058C8.5701 11.068 9.42855 11.82 10.1368 12.3142L10.6679 12.701L11.2474 12.3787C11.5586 12.196 11.8483 12.0268 12.1165 11.871C12.3848 11.7153 12.5726 11.6159 12.6799 11.5729C12.7979 11.4977 12.9052 11.4601 13.0018 11.4601H13.0179C13.8871 12.008 14.9601 12.7225 16.2371 13.6035C16.2478 13.6787 16.221 13.7593 16.1566 13.8452ZM11.1347 6.43203C11.2098 6.49649 11.2957 6.52872 11.3922 6.52872H11.6015L15.2874 6.54484C15.3518 6.54484 15.4135 6.52604 15.4725 6.48843C15.5315 6.45083 15.5798 6.40248 15.6174 6.34339C15.6549 6.2843 15.6737 6.22253 15.6737 6.15806V5.8841C15.663 5.76592 15.6147 5.67191 15.5289 5.60208C15.443 5.53224 15.3464 5.49732 15.2391 5.49732H12.8087L17.0258 1.27504C17.1223 1.17834 17.1706 1.06016 17.1706 0.920494C17.1706 0.780825 17.1197 0.659958 17.0177 0.557893C16.9158 0.455827 16.7951 0.404794 16.6556 0.404794C16.5161 0.404794 16.3927 0.453141 16.2854 0.549835L12.0683 4.78824L12.0844 2.29032C12.0844 2.18288 12.0468 2.09156 11.9717 2.01635C11.8966 1.94115 11.8107 1.90355 11.7142 1.90355H11.4405C11.3761 1.90355 11.3144 1.91698 11.2554 1.94383C11.1964 1.97069 11.1481 2.0083 11.1106 2.05664C11.073 2.10499 11.0542 2.16677 11.0542 2.24197V5.96468H11.0703L11.0381 6.15806C11.0489 6.27625 11.081 6.36757 11.1347 6.43203Z"/>
+        </symbol>
+    
+        <symbol id="hamburger" viewBox="0 0 21 17" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.625" y="0.340332" width="19.75" height="1.78467" />
+            <rect x="0.625" y="7.71533" width="19.75" height="1.78467" />
+            <rect x="0.625" y="15.0903" width="19.75" height="1.78467" />
+        </symbol>
+        <symbol id="cross" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.62477 8.23265L15.9763 1.88109L14.7144 0.619141L8.36282 6.9707L2.01149 0.619373L0.749538 1.88132L7.10087 8.23265L0.749023 14.5845L2.01097 15.8464L8.36282 9.49461L14.7149 15.8467L15.9768 14.5847L9.62477 8.23265Z" />
+        </symbol>
+    </svg>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

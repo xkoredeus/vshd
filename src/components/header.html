@@ -1,16 +1,26 @@
 <header class="header">
     <div class="layout__grid">
-        <a class="header__logo" href="index.html">
+        <a class="header__logo" href="index.html" cursor-class="cursor--light-button">
             <svg class="header__logo-icon" width="61" height="9">
                 <use xlink:href="#logo-title"></use>
             </svg>
         </a>
         <div class="header__nav">
-            <a class="header__nav-link" href="#">проекты</a>
-            <a class="header__nav-link header__nav-link--here" href="#">пресс-центр</a>
-            <a class="header__nav-link" href="#">о компании</a>
-            <a class="header__nav-link" href="#">партнеры</a>
-            <a class="header__nav-link" href="#">Контакты</a>
+            <div class="header__nav-item">
+                <a class="header__nav-link" cursor-class="cursor--interactive" href="projects.html">проекты</a>
+            </div>
+            <div class="header__nav-item">
+                <a class="header__nav-link" cursor-class="cursor--interactive" href="news.html">пресс-центр</a>
+            </div>
+            <div class="header__nav-item">
+                <a class="header__nav-link" cursor-class="cursor--interactive" href="about.html">о компании</a>
+            </div>
+            <div class="header__nav-item">
+                <a class="header__nav-link" cursor-class="cursor--interactive" href="partners.html">партнеры</a>
+            </div>
+            <div class="header__nav-item">
+                <a class="header__nav-link" cursor-class="cursor--interactive" href="contacts.html">Контакты</a>
+            </div>
         </div>
         <div class="header__buttons">
             <a class="header__tel d-xl-none" href="tel:7 4951509999">
@@ -18,7 +28,7 @@
                     <use xlink:href="#telephone"></use>
                 </svg>
             </a>
-            <button class="header__language">Eng</button>
+            <button class="header__language" cursor-class="cursor--interactive">Eng</button>
             <button class="header__hamb d-xl-none js-toggle-menu" type="button">
                 <span class="header__hamb-icon header__hamb-icon--1">
                     <svg width="21" height="17">

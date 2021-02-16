@@ -1,0 +1,17 @@
+.unknown {
+  position: relative;
+  height: 100%;
+  &__in {
+    position: absolute;
+    width: calc(100% + 20px);
+    height: calc(100% + 10px);
+    left: -10px;
+    top: 0;
+    background-image: url('../img/unknown__bg.jpg');
+
+    @include r(576) {
+      width: calc(100% + 40px);
+      left: -20px;
+    }
+  }
+}

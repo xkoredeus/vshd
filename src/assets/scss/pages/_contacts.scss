@@ -1,0 +1,157 @@
+.contacts {
+  &__title {
+    grid-column: 1/5;
+
+    @include r(768) {
+      grid-column: 1/13;
+    }
+  }
+  &__form {
+    grid-column: 5/13;
+    display: grid;
+
+    @include r(768) {
+      grid-column: 1/13;
+    }
+  }
+  &__input,
+  &__textarea {
+    color: $lightgray;
+    padding: 0;
+    border: none;
+
+    &::placeholder {
+      color: $lightgray !important;
+    }
+  }
+
+  &__input {
+    font-size: 1.4286rem;
+    height: 48px;
+
+    &::placeholder {
+      font-size: 1.4286rem;
+    }
+  }
+
+  &__textarea {
+    font-size: 2.1429rem;
+    text-transform: none;
+
+    &::placeholder {
+      font-size: 2.1429rem;
+      text-transform: none;
+    }
+  }
+
+  .button--tr {
+    text-align: left;
+    margin-top: 15px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    &:first-child {
+      grid-column: 1/5;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      grid-column: span 3;
+    }
+
+    &:last-child {
+      grid-column: 11/13;
+    }
+
+    @include r(1200) {
+      grid-column: span 6 !important;
+    }
+
+    @include r(576) {
+      grid-column: span 12 !important;
+    }
+  }
+
+  &__link {
+    &:hover {
+      color: $dark;
+    }
+  }
+
+  &__map {
+    height: 400px;
+
+    @include r(768) {
+      height: 300px;
+    }
+  }
+
+  //&__info {
+  //  @include r(1200) {
+  //
+  //  }
+  //}
+}
+
+[class*="ymaps-2"][class*="-ground-pane"] {
+  -webkit-filter: grayscale(100%) !important;
+  filter: grayscale(100%) !important;
+}
+
+[class*="ymaps-2"][class*="-balloon__content"] {
+  @include r(564) {
+    background: $olive;
+    margin-right: 0;
+    padding: 0;
+  }
+}
+
+[class*="ymaps-2"][class*="-balloon_layout_panel"] {
+  @include r(564) {
+    background: $olive;
+  }
+}
+
+[class*="ymaps-2"][class*="-events-pane"] {
+  // cursor: none !important;
+}
+
+.balloon {
+  &__content {
+    font-size: 0.8571rem;
+    text-align: left;
+    text-transform: uppercase;
+    width: 129px;
+    height: 129px;
+    background-color: $olive;
+    padding: 10px;
+    margin-top: 49px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include r(564) {
+      width: auto;
+      height: auto;
+      margin-top: 0;
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+
+    @include r(564) {
+      margin-bottom: 10px;
+    }
+
+    span:last-child {
+      color: $white;
+    }
+  }
+}

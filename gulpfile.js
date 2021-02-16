@@ -91,11 +91,29 @@ gulp.task('scripts', function () {
         'src/assets/js/vendor/jquery/jquery.masked-input.min.js',
         'src/assets/js/vendor/fancybox/jquery.fancybox.min.js',
         'src/assets/js/vendor/swiper/swiper.min.js',
+        'src/assets/js/vendor/gsap/gsap.min.js',
+        'src/assets/js/vendor/gsap/PixiPlugin.min.js',
+        'src/assets/js/vendor/gsap/ScrambleTextPlugin.min.js',
+        'src/assets/js/vendor/gsap/ScrollToPlugin.min.js',
+        'src/assets/js/vendor/gsap/ScrollTrigger.min.js',
         'src/assets/js/app.js'
     ])
     // .pipe(sourcemaps.init())
     //If concatenating more than one JS file
         .pipe(concat('app.js'))
+        // .pipe(sourcemaps.write('./'))
+        // .pipe(minify())
+        .pipe(gulp.dest('dist/assets/js/'))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('map', function () {
+    return gulp.src([
+        'src/assets/js/map.js'
+    ])
+    // .pipe(sourcemaps.init())
+    //If concatenating more than one JS file
+    //     .pipe(concat('app.js'))
         // .pipe(sourcemaps.write('./'))
         // .pipe(minify())
         .pipe(gulp.dest('dist/assets/js/'))
@@ -111,10 +129,10 @@ gulp.task('clean:dist', function () {
 
 // ------------ Build Sequence -------------
 // Simply run 'gulp' in terminal to run local server and watch for changes
-gulp.task('default', ['clean:dist', 'font', 'scripts', 'images', 'compile-html', 'resetPages', 'watch']);
+gulp.task('default', ['clean:dist', 'font', 'scripts', 'map', 'images', 'compile-html', 'resetPages', 'watch']);
 
 // Creates production ready assets in dist folder
 gulp.task('build', function () {
     console.log('Building production ready assets');
-    runSequence('clean:dist', 'sass', ['scripts', 'images', 'font', 'compile-html'])
+    runSequence('clean:dist', 'sass', ['scripts', 'map', 'images', 'font', 'compile-html'])
 });

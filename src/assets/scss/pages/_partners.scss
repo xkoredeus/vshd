@@ -3,12 +3,49 @@
     font-size: 20px;
     text-transform: uppercase;
     grid-column: 1/5;
-    padding: 45px 0 0;
+    padding: 65px 0 0;
+
+    @include r(768) {
+      grid-column: 1/13;
+      padding: 0 !important;
+    }
+  }
+
+  &__item {
+    @include r(768) {
+      padding: 40px 0;
+    }
+
+    &:first-child {
+      .partners__title {
+        padding: 45px 0 0;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 70px;
+    }
   }
 
   &__slider {
+    height: 250px;
+
+    @include r(768) {
+      height: auto;
+    }
+
     &-wrapper {
       grid-column: 5/13;
+
+      @include r(768) {
+        grid-column: 1/13;
+      }
+    }
+
+    @include rmin(768) {
+      .swiper-slide {
+        height: calc((100% - 30px) / 2);
+      }
     }
 
     &-logo {

@@ -6,33 +6,68 @@
   grid-column-gap: 10px;
   grid-row-gap: 30px;
 
+  @include r(1200) {
+    grid-column: 1/13;
+  }
+
   &__section {
-    min-height: calc(100vh - 340px);
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__close {
+    position: absolute;
+    font-size: 12px;
+    text-transform: uppercase;
+    right: 0;
+    top: 0;
+    color: $olive;
     display: flex;
     align-items: center;
 
-    @include rmin(1466) {
-      min-height: calc(100vh - 370px);
+    &-icon {
+      fill: $olive;
+      margin-left: 35px;
     }
   }
 
   &__title {
     grid-column: 1/5;
+
+    @include r(768) {
+      grid-column: 1/13;
+    }
   }
 
   &__input {
     grid-column: 1/5;
     grid-row: 2/3;
+
+    @include r(768) {
+      grid-column: 1/13;
+    }
   }
 
   .checkbox {
     grid-column: 5/11;
     grid-row: 2/3;
+
+    @include r(768) {
+      grid-column: 1/13;
+      grid-row: auto;
+    }
   }
 
   .button {
     grid-column: 5/11;
     grid-row: 3/4;
+
+    @include r(768) {
+      grid-column: 1/13;
+      grid-row: auto;
+    }
   }
 
 }

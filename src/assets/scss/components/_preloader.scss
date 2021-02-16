@@ -1,0 +1,80 @@
+.preloader {
+  &__wrapper {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    min-height: 300px;
+    width: 100vw;
+    background-color: $white;
+    @include flex-center;
+    z-index: 3000;
+  }
+
+  &__overlay {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 2500px;
+    height: 2500px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(2.5);
+    background: $olive;
+    background: radial-gradient(circle, $olive 36%, $tr 55%, $tr 100%);
+    @include ease;
+  }
+
+  &__first-text {
+    position: fixed;
+    font-weight: bold;
+    font-family: $Arimo-Bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: $white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    //opacity: 0;
+  }
+
+  &__text {
+    position: relative;
+    font-family: $Circe;
+    font-size: 18px;
+    letter-spacing: 0.4em;
+
+    &-base {
+      position: fixed;
+      color: $white;
+      left: 50%;
+      top: 50%;
+      width: 196px;
+      height: 196px;
+      background-color: $olive;
+      border-radius: 50%;
+      @include flex-center;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+
+    &-decoration {
+      position: absolute;
+      width: 3px;
+      height: 20px;
+      bottom: 0;
+      background-color: $white;
+
+      &--1 {
+        left: -17px;
+      }
+
+      &--2 {
+        right: -18px;
+      }
+    }
+  }
+}

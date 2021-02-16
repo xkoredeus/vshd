@@ -1,7 +1,10 @@
 .header {
   position: relative;
   margin-bottom: 5px;
-  z-index: 1;
+
+  @include r(1200) {
+    z-index: 1001;
+  }
 
   @include r(768) {
     margin-bottom: 0;
@@ -35,6 +38,16 @@
       display: block;
       padding-bottom: 100%;
     }
+
+    &-icon {
+      position: relative;
+      z-index: 1110;
+
+      @include rmin(1200) {
+        width: 65px;
+        height: 10px;
+      }
+    }
   }
 
   &__top {
@@ -66,15 +79,22 @@
       z-index: 11;
     }
 
+    &-item {
+      grid-column: span 2;
+    }
+
     &-link {
       position: relative;
       text-transform: uppercase;
-      grid-column: span 2;
 
       @include r(1200) {
         font-size: 3.0714rem;
         opacity: 0;
         transform: translateY(-8px);
+      }
+
+      &:hover {
+        color: $dark;
       }
 
       &--here {
@@ -99,12 +119,6 @@
               height: 14px;
             }
           }
-
-          &:hover {
-            &::before {
-              background-color: $black;
-            }
-          }
         }
       }
     }
@@ -127,6 +141,11 @@
 
   &__title {
     margin-bottom: 0;
+
+    &--small {
+      line-height: 0.8;
+      text-transform: uppercase;
+    }
   }
 
   &__buttons {
@@ -190,9 +209,11 @@ body.show-menu {
   .layout__overlay {
     opacity: 1;
     visibility: visible;
+    z-index: 2000;
   }
 
   .header {
+    z-index: 2001;
     &__nav {
       opacity: 1;
       visibility: visible;

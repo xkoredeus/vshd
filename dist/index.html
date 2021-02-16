@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#0038A4">
+    <meta name="theme-color" content="#D9C557">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <title>New Project</title>
     <link rel="stylesheet" href="assets/css/app.css">
@@ -13,102 +13,120 @@
 
 <body>
     <style>
-        .preloader__wrp {
-            position: fixed;
-            left: 0;
-            top: 0;
-            height: 100vh;
-            min-height: 300px;
-            width: 100vw;
-            background-color: #fff;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            z-index: 100;
-        }
+        /*.preloader__wrp {*/
+        /*    position: fixed;*/
+        /*    left: 0;*/
+        /*    top: 0;*/
+        /*    height: 100vh;*/
+        /*    min-height: 300px;*/
+        /*    width: 100vw;*/
+        /*    background-color: #fff;*/
+        /*    display: -webkit-box;*/
+        /*    display: -ms-flexbox;*/
+        /*    display: flex;*/
+        /*    -webkit-box-pack: center;*/
+        /*    -ms-flex-pack: center;*/
+        /*    justify-content: center;*/
+        /*    -webkit-box-align: center;*/
+        /*    -ms-flex-align: center;*/
+        /*    align-items: center;*/
+        /*    z-index: 100;*/
+        /*}*/
     
-        .preloader {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            height: 50px;
-            width: 50px;
-            margin: -25px 0 0 -25px;
-        }
+        /*.preloader {*/
+        /*    display: block;*/
+        /*    position: absolute;*/
+        /*    top: 50%;*/
+        /*    left: 50%;*/
+        /*    height: 50px;*/
+        /*    width: 50px;*/
+        /*    margin: -25px 0 0 -25px;*/
+        /*}*/
     
-        .preloader span {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #D9C557;
-            -webkit-animation: preloader 1.7s infinite ease-in-out both;
-            animation: preloader 1.7s infinite ease-in-out both;
-            margin-right: 5px;
-        }
+        /*.preloader span {*/
+        /*    position: absolute;*/
+        /*    width: 10px;*/
+        /*    height: 10px;*/
+        /*    border-radius: 50%;*/
+        /*    background-color: #D9C557;*/
+        /*    -webkit-animation: preloader 1.7s infinite ease-in-out both;*/
+        /*    animation: preloader 1.7s infinite ease-in-out both;*/
+        /*    margin-right: 5px;*/
+        /*}*/
     
-        .preloader span:nth-child(1) {
-            left: 0;
-            -webkit-animation-delay: 0.6s;
-            animation-delay: 0.6s;
-        }
+        /*.preloader span:nth-child(1) {*/
+        /*    left: 0;*/
+        /*    -webkit-animation-delay: 0.6s;*/
+        /*    animation-delay: 0.6s;*/
+        /*}*/
     
-        .preloader span:nth-child(2) {
-            left: 15px;
-            -webkit-animation-delay: 0.4s;
-            animation-delay: 0.4s;
-        }
+        /*.preloader span:nth-child(2) {*/
+        /*    left: 15px;*/
+        /*    -webkit-animation-delay: 0.4s;*/
+        /*    animation-delay: 0.4s;*/
+        /*}*/
     
-        .preloader span:nth-child(3) {
-            left: 30px;
-            -webkit-animation-delay: 0.2s;
-            animation-delay: 0.2s;
-        }
+        /*.preloader span:nth-child(3) {*/
+        /*    left: 30px;*/
+        /*    -webkit-animation-delay: 0.2s;*/
+        /*    animation-delay: 0.2s;*/
+        /*}*/
     
-        .preloader span:nth-child(4) {
-            left: 45px;
-            -webkit-animation-delay: 0.1s;
-            animation-delay: 0.1s;
-        }
+        /*.preloader span:nth-child(4) {*/
+        /*    left: 45px;*/
+        /*    -webkit-animation-delay: 0.1s;*/
+        /*    animation-delay: 0.1s;*/
+        /*}*/
     
-        @-webkit-keyframes preloader {
-            0%, 80%, 100% {
-                -webkit-transform: scale(0);
-                transform: scale(0);
-                transform: scale(0);
-                opacity: 0;
-            }
-            40% {
-                -webkit-transform: scale(1);
-                transform: scale(1);
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
+        /*@-webkit-keyframes preloader {*/
+        /*    0%, 80%, 100% {*/
+        /*        -webkit-transform: scale(0);*/
+        /*        transform: scale(0);*/
+        /*        transform: scale(0);*/
+        /*        opacity: 0;*/
+        /*    }*/
+        /*    40% {*/
+        /*        -webkit-transform: scale(1);*/
+        /*        transform: scale(1);*/
+        /*        transform: scale(1);*/
+        /*        opacity: 1;*/
+        /*    }*/
+        /*}*/
     
-        @keyframes preloader {
-            0%, 80%, 100% {
-                -webkit-transform: scale(0);
-                transform: scale(0);
-                transform: scale(0);
-                opacity: 0;
-            }
-            40% {
-                -webkit-transform: scale(1);
-                transform: scale(1);
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
+        /*@keyframes preloader {*/
+        /*    0%, 80%, 100% {*/
+        /*        -webkit-transform: scale(0);*/
+        /*        transform: scale(0);*/
+        /*        transform: scale(0);*/
+        /*        opacity: 0;*/
+        /*    }*/
+        /*    40% {*/
+        /*        -webkit-transform: scale(1);*/
+        /*        transform: scale(1);*/
+        /*        transform: scale(1);*/
+        /*        opacity: 1;*/
+        /*    }*/
+        /*}*/
     </style>
-    <div class="preloader__wrp">
+    <div class="preloader__wrapper">
+        <div class="preloader__overlay"></div>
+        <div class="preloader__first-text js-preloader-first-text">Human oriented development</div>
+        <div class="preloader__text-base">
+            <div class="preloader__text">
+                <div class="preloader__text-decoration preloader__text-decoration--1"></div>
+                <svg width="101" height="15" class="preloader__text-icon" viewBox="0 0 101 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M36.5096 4.74805C34.6658 4.74805 33.1582 5.93379 33.1582 7.39317C33.1582 9.42009 34.9103 9.76467 36.4688 10.0586C37.9765 10.3525 39.1581 10.5754 39.1581 11.974C39.1581 13.0381 37.9765 13.9097 36.5198 13.9097C35.0631 13.9097 33.8814 13.0381 33.8814 11.974V11.8727H33.1684V11.974C33.1684 13.4334 34.676 14.6191 36.5198 14.6191C38.3737 14.6191 39.8813 13.4334 39.8813 11.974C39.8813 9.98763 38.1496 9.65319 36.6115 9.35929C35.0835 9.06538 33.8814 8.83229 33.8814 7.39317C33.8814 6.32904 35.0631 5.45747 36.5198 5.45747C37.9765 5.45747 39.1581 6.32904 39.1581 7.39317V7.49452H39.8712V7.39317C39.861 5.94393 38.3534 4.74805 36.5096 4.74805Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                    <path d="M21.2397 4.74805C18.5097 4.74805 16.2891 6.95739 16.2891 9.67345C16.2891 12.3895 18.5097 14.5989 21.2397 14.5989C23.9697 14.5989 26.1904 12.3895 26.1904 9.67345C26.1904 6.95739 23.9697 4.74805 21.2397 4.74805ZM21.2397 13.8894C18.907 13.8894 17.0021 11.9943 17.0021 9.67345C17.0021 7.35263 18.907 5.45747 21.2397 5.45747C23.5725 5.45747 25.4773 7.35263 25.4773 9.67345C25.4773 12.0044 23.5725 13.8894 21.2397 13.8894Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                    <path d="M78.7847 4.74805C76.0547 4.74805 73.834 6.95739 73.834 9.67345C73.834 12.3895 76.0547 14.5989 78.7847 14.5989C81.5147 14.5989 83.7354 12.3895 83.7354 9.67345C83.7354 6.95739 81.5147 4.74805 78.7847 4.74805ZM78.7847 13.8894C76.4519 13.8894 74.547 11.9943 74.547 9.67345C74.547 7.35263 76.4418 5.45747 78.7847 5.45747C81.1174 5.45747 83.0223 7.35263 83.0223 9.67345C83.0223 12.0044 81.1174 13.8894 78.7847 13.8894Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                    <path d="M62.4435 4.7181C61.0785 4.7181 59.8052 5.39713 59.0412 6.51193V0.350098H58.3281V14.3662H59.0412V8.81248C59.0412 6.94772 60.5692 5.42753 62.4435 5.42753C64.3178 5.42753 65.8458 6.94772 65.8458 8.81248V14.346H66.5589V8.81248C66.5589 6.5626 64.7151 4.7181 62.4435 4.7181Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                    <path d="M4.89955 13.0078L1.62965 5.00146H0.855469L4.68563 14.376H5.10328L8.93345 5.00146H8.16945L4.89955 13.0078Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                    <path d="M49.5177 0.350098H48.8047V5.03227H49.5177V0.350098Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                    <path d="M99.8602 7.1399C98.9638 5.66025 97.3747 4.74814 95.6226 4.74814C92.8926 4.74814 90.6719 6.95748 90.6719 9.67355C90.6719 12.3896 92.8926 14.599 95.6226 14.599C97.3747 14.599 98.9638 13.697 99.8602 12.2072V14.3659H100.573V0.359863H99.8602V7.1399ZM95.6226 13.8896C93.2898 13.8896 91.3849 11.9944 91.3849 9.67355C91.3849 7.35273 93.2898 5.45756 95.6226 5.45756C97.9553 5.45756 99.8602 7.35273 99.8602 9.67355C99.8602 12.0045 97.9553 13.8896 95.6226 13.8896Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+                </svg>
+                <div class="preloader__text-decoration preloader__text-decoration--2"></div>
+            </div>
+        </div>
+    
         <div class="preloader">
             <span></span>
             <span></span>
@@ -116,23 +134,36 @@
             <span></span>
         </div>
     </div>
+    <!--<div id="cursor">-->
+    <!--    <div class="cursor__circle"></div>-->
+    <!--</div>-->
 
     <div class="layout">
         <div class="layout__overlay"></div>
         <div class="layout__in">
             <header class="header">
                 <div class="layout__grid">
-                    <a class="header__logo" href="index.html">
+                    <a class="header__logo" href="index.html" cursor-class="cursor--light-button">
                         <svg class="header__logo-icon" width="61" height="9">
                             <use xlink:href="#logo-title"></use>
                         </svg>
                     </a>
                     <div class="header__nav">
-                        <a class="header__nav-link" href="#">проекты</a>
-                        <a class="header__nav-link header__nav-link--here" href="#">пресс-центр</a>
-                        <a class="header__nav-link" href="#">о компании</a>
-                        <a class="header__nav-link" href="#">партнеры</a>
-                        <a class="header__nav-link" href="#">Контакты</a>
+                        <div class="header__nav-item">
+                            <a class="header__nav-link" cursor-class="cursor--interactive" href="projects.html">проекты</a>
+                        </div>
+                        <div class="header__nav-item">
+                            <a class="header__nav-link" cursor-class="cursor--interactive" href="news.html">пресс-центр</a>
+                        </div>
+                        <div class="header__nav-item">
+                            <a class="header__nav-link" cursor-class="cursor--interactive" href="about.html">о компании</a>
+                        </div>
+                        <div class="header__nav-item">
+                            <a class="header__nav-link" cursor-class="cursor--interactive" href="partners.html">партнеры</a>
+                        </div>
+                        <div class="header__nav-item">
+                            <a class="header__nav-link" cursor-class="cursor--interactive" href="contacts.html">Контакты</a>
+                        </div>
                     </div>
                     <div class="header__buttons">
                         <a class="header__tel d-xl-none" href="tel:7 4951509999">
@@ -140,7 +171,7 @@
                                 <use xlink:href="#telephone"></use>
                             </svg>
                         </a>
-                        <button class="header__language">Eng</button>
+                        <button class="header__language" cursor-class="cursor--interactive">Eng</button>
                         <button class="header__hamb d-xl-none js-toggle-menu" type="button">
                             <span class="header__hamb-icon header__hamb-icon--1">
                                 <svg width="21" height="17">
@@ -168,7 +199,7 @@
                         <div class="nominal__info">
                             <div class="nominal__title home__section-title section__title">Девелопер безупречного образа жизни</div>
                         </div>
-                        <a class="button--circle button--circle--olive " href="#">
+                        <a class="button--circle button--circle--olive" cursor-class="cursor--light-button" href="about.html">
                             <span class="button--circle__in">
                                 <span class="button--circle__text">о компании</span>
                                 <svg class="button--circle__icon" width="15" height="8">
@@ -184,7 +215,7 @@
                             <div class="nominal__subtitle section__subtitle">проекты</div>
                             <div class="nominal__title--small section__title--small">НАША СПЕЦИАЛИЗАЦИЯ - УНИКАЛЬНЫЕ ЭЛИТНЫЕ ЖИЛЫЕ КОМПЛЕКСЫ И ЗНАКОВЫЕ ПРОЕКТЫ МНОГОФУНКЦИОНАЛЬНОГО НАЗНАЧЕНИЯ</div>
                         </div>
-                        <a class="button--circle " href="#">
+                        <a class="button--circle" cursor-class="cursor--dark-button" href="projects.html">
                             <span class="button--circle__in">
                                 <span class="button--circle__text">проекты</span>
                                 <svg class="button--circle__icon" width="15" height="8">
@@ -209,7 +240,7 @@
                         <div class="nominal__info">
                             <div class="nominal__title section__title"></div>
                         </div>
-                        <a class="button--circle button--circle--olive " href="#">
+                        <a class="button--circle button--circle--olive" cursor-class="cursor--light-button" href="news.html">
                             <span class="button--circle__in">
                                 <span class="button--circle__text">пресс-центр</span>
                                 <svg class="button--circle__icon" width="15" height="8">
@@ -224,17 +255,27 @@
             <footer class="footer">
                 <div class="layout__grid">
                     <div class="footer__item">
-                        <a class="footer__link" href="#">контакты</a>
-                        <a class="footer__link" href="#">e-mail</a>
+                        <div class="footer__link-wrapper">
+                            <a class="footer__link" cursor-class="cursor--interactive" href="contacts.html">контакты</a>
+                        </div>
+                        <div class="footer__link-wrapper">
+                            <a class="footer__link" cursor-class="cursor--interactive" href="mailto: hello@voshodmoscow.ru">e-mail</a>
+                        </div>
                     </div>
                     <div class="footer__item">
-                        <a class="footer__link" href="#">facebook</a>
-                        <a class="footer__link" href="#">instagramm</a>
+                        <div class="footer__link-wrapper">
+                            <a class="footer__link" cursor-class="cursor--interactive" href="#">facebook</a>
+                        </div>
+                        <div class="footer__link-wrapper">
+                            <a class="footer__link" cursor-class="cursor--interactive" href="#">instagramm</a>
+                        </div>
                     </div>
                     <div class="footer__item">
-                        <a class="footer__link" href="tel:74951509999">+7<br>495 150 99 99</a>
+                        <div class="footer__link-wrapper">
+                            <a class="footer__link" cursor-class="cursor--interactive" href="tel:74951509999">+7<br>495 150 99 99</a>
+                        </div>
                     </div>
-                    <div class="footer__copyrights d-flex align-items-center">© <span class="ml-1 mt-1 d-inline-block">2020 Vos'hod</span></div>
+                    <div class="footer__copyrights d-flex align-items-center">© <span class="ml-1 mt-1 d-inline-block">2021 Vos'hod</span></div>
                     <div class="footer__subtitle">Эта веб-страница носит исключительно информационный характер и не является публичной офертой, определяемой положениями статьи 437 ГК РФ</div>
                 </div>
             </footer>

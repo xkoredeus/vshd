@@ -20,15 +20,22 @@ button {
   padding: 11px 8px;
   display: inline-block;
 
-  &--tr {
+  &:hover {
     color: $white;
-    background-color: $tr;
-    border-color: $white;
+  }
 
-    &-white {
-      color: #fff;
-      border-color: #fff;
-    }
+  span {
+    position: relative;
+    z-index: 1110;
+  }
+
+  &--tr {
+    font-size: 1.4286rem;
+    color: $olive;
+    background-color: $tr;
+    border-color: $tr;
+    padding: 0;
+    text-transform: uppercase;
   }
 
   &--circle {
@@ -52,9 +59,11 @@ button {
     }
 
     &__in {
+      position: relative;
       transform: translateX(22px);
       display: flex;
       align-items: center;
+      z-index: 1110;
     }
 
     &__icon {

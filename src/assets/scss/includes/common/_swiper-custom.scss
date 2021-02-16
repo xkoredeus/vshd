@@ -1,5 +1,9 @@
 .swiper-container {
   padding: 70px 0;
+
+  @include r(768) {
+    padding: 45px 0;
+  }
   & > .swiper-pagination {
     position: absolute;
     left: 0;
@@ -9,6 +13,7 @@
     .swiper-pagination-bullet {
       width: 10px;
       height: 10px;
+      // cursor: none;
 
       &:not(:last-child) {
         margin-right: 5px;

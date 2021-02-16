@@ -1,6 +1,14 @@
 .project {
   grid-column: span 4;
 
+  @include r(960) {
+    grid-column: span 6;
+  }
+
+  @include r(576) {
+    grid-column: span 12;
+  }
+
   &__picture {
     width: 100%;
     @include cv;
@@ -12,6 +20,10 @@
       float: left;
       height: 0;
       padding-top: 619px / 400px * 100%;
+
+      @include r(960) {
+        padding-top: 619px / 800px * 100%;
+      }
     }
 
     &::after {
@@ -23,6 +35,7 @@
 
   &__top {
     position: relative;
+    display: block;
     margin-bottom: 10px;
   }
 
@@ -32,24 +45,29 @@
     opacity: 0;
     @include ease;
     @include flex-center;
+    padding: 0 25px;
 
     &:hover {
       opacity: 1;
 
       .project__title {
         opacity: 1;
+        transform: translateY(0);
       }
     }
   }
 
   &__title {
+    position: relative;
     font-size: 2.8571rem;
     text-transform: uppercase;
     color: $white;
     text-align: center;
     opacity: 0;
     @include ease;
+    transform: translateY(5px);
     transition-delay: .2s;
+    z-index: 1110;
   }
 
   &__link {
@@ -64,8 +82,10 @@
     }
 
     &:hover {
+      color: $dark;
       .project__link-arrow {
-        fill: $olive;
+        transform: translateX(4px);
+        //fill: $olive;
       }
     }
   }

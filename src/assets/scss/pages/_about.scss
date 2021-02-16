@@ -11,6 +11,10 @@
       left: 0;
       bottom: 0;
 
+      @include r(768) {
+        display: none;
+      }
+
       border: 1px solid $dark;
       border-radius: 50%;
 
@@ -28,6 +32,14 @@
 
         fill: $dark;
       }
+    }
+  }
+
+  &__last-section {
+    margin-bottom: 30px;
+
+    @include r(768) {
+      margin-bottom: 90px;
     }
   }
 }

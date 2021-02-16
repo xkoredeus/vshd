@@ -33,6 +33,10 @@
     line-height: 1;
     text-transform: uppercase;
     display: block;
+
+    &:hover {
+      color: $dark;
+    }
   }
 
   &__copyrights {

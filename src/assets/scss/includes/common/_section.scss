@@ -29,6 +29,10 @@
       color: $olive;
       margin-top: 10px;
       margin-bottom: 25px;
+
+      @include r(768) {
+        margin: 0;
+      }
     }
 
     &--big {

@@ -4,6 +4,17 @@
       font-size: 0.8571rem;
       text-transform: uppercase;
       display: inline-block;
+
+      @include r(768) {
+        order: 1;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-top {
+      @include r(768) {
+        order: 2;
+      }
     }
   }
 
@@ -39,5 +50,9 @@
 
   &-nominal--tight__picture-wrapper {
     margin: 10px 0;
+  }
+
+  &__news-list {
+    margin-bottom: 120px;
   }
 }
