@@ -93,7 +93,7 @@ gulp.task('scripts', function () {
         'src/assets/js/vendor/swiper/swiper.min.js',
         'src/assets/js/vendor/gsap/gsap.min.js',
         'src/assets/js/vendor/gsap/PixiPlugin.min.js',
-        'src/assets/js/vendor/gsap/ScrambleTextPlugin.min.js',
+        // 'src/assets/js/vendor/gsap/ScrambleTextPlugin.min.js',
         'src/assets/js/vendor/gsap/ScrollToPlugin.min.js',
         'src/assets/js/vendor/gsap/ScrollTrigger.min.js',
         'src/assets/js/app.js'
