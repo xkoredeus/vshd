@@ -15,17 +15,22 @@
     height: 100%;
     display: flex;
     align-items: center;
+
+    & > .layout__grid:first-child {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
   }
 
   &__close {
-    position: absolute;
     font-size: 12px;
     text-transform: uppercase;
-    right: 0;
-    top: 0;
     color: $olive;
     display: flex;
     align-items: center;
+    grid-column: 11/13;
 
     &-icon {
       fill: $olive;
