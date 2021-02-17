@@ -33,8 +33,12 @@ html, body {
 
   @include scroll;
 
-  @include rmin(1200) {
+  @include rmin(1480) {
     font-size: 16px;
+  }
+
+  @include rmin(1800) {
+    font-size: 18px;
   }
 
   &.fixed {

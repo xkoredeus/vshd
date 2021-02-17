@@ -47,6 +47,11 @@
         width: 65px;
         height: 10px;
       }
+
+      @include rmin(1800) {
+        width: 90px;
+        height: 18px;
+      }
     }
   }
 

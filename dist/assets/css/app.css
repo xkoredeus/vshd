@@ -5751,7 +5751,7 @@ button {
 
 .button--circle {
   position: relative;
-  font-size: 15px;
+  font-size: 1.0714rem;
   text-transform: uppercase;
   color: #ffffff;
   width: 100%;
@@ -5794,6 +5794,13 @@ button {
 .button--circle__icon {
   fill: #ffffff;
   margin-left: 25px;
+}
+
+@media only screen and (min-width: 1480px) {
+  .button--circle__icon {
+    width: 25px;
+    height: 15px;
+  }
 }
 
 .button--circle--olive {
@@ -5976,9 +5983,15 @@ html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
   background: #808080;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1480px) {
   html, body {
     font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  html, body {
+    font-size: 18px;
   }
 }
 
@@ -6299,6 +6312,13 @@ a:hover {
   .header__logo-icon {
     width: 65px;
     height: 10px;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .header__logo-icon {
+    width: 90px;
+    height: 18px;
   }
 }
 
@@ -7424,7 +7444,7 @@ body.show-menu .header__hamb-icon--2 {
 .project-page__pdf span {
   position: relative;
   font-family: Monserrat, sans-serif;
-  font-size: 10px;
+  font-size: 0.7143rem;
   color: #D9C557;
   letter-spacing: 0.085em;
   text-transform: uppercase;
@@ -7521,7 +7541,7 @@ body.show-menu .header__hamb-icon--2 {
 }
 
 .partners__title {
-  font-size: 20px;
+  font-size: 1.4286rem;
   text-transform: uppercase;
   grid-column: 1/5;
   padding: 65px 0 0;
@@ -7619,7 +7639,7 @@ body.show-menu .header__hamb-icon--2 {
 }
 
 .subscribe__close {
-  font-size: 12px;
+  font-size: 0.8571rem;
   text-transform: uppercase;
   color: #D9C557;
   display: -webkit-box;
