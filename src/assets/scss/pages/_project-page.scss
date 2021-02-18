@@ -55,6 +55,10 @@
       text-transform: uppercase;
       padding: 8px 0;
 
+      @include rmin(1200) {
+        padding: 15px 0;
+      }
+
       &::before {
         position: absolute;
         content: '';
