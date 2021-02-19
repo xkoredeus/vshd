@@ -1,11 +1,12 @@
 #cursor {
   position: fixed;
-  z-index: 1109;
+  z-index: 2999;
   left: 0;
   top: 0;
   pointer-events: none;
   will-change: transform;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
+  backface-visibility: hidden;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -15,8 +16,8 @@
     margin-top: -50%;
     margin-left: -50%;
     border-radius: 50%;
+    //background-color: #263aa8;
     background-color: $olive;
-    //border: solid 1px rgba(227, 222, 193, 0.64);
     transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1),
     background-color 0.5s cubic-bezier(0.25, 1, 0.5, 1),
     border-color 0.5s cubic-bezier(0.25, 1, 0.5, 1),
@@ -32,18 +33,16 @@
     }
 
     &.cursor--dark-button {
-      animation: changeMixBlendMode .5s ease;
-      animation-delay: .5s;
       mix-blend-mode: normal;
 
       .cursor__circle {
         @include interactive;
+        background-color: $olive;
       }
     }
 
     &.cursor--light-button {
-      animation: changeMixBlendMode .5s ease;
-      animation-delay: .5s;
+      mix-blend-mode: normal;
 
       .cursor__circle {
         background-color: $dark;
@@ -52,6 +51,8 @@
     }
 
     &.cursor--dark-interactive {
+      mix-blend-mode: normal;
+
       .cursor__circle {
         background-color: $dark;
         @include interactive;
@@ -59,30 +60,30 @@
     }
 
     &.cursor--dark-not-interactive {
-      mix-blend-mode: normal;
+      //mix-blend-mode: normal;
     }
-
-    &.cursor--interactive-drag {
-      .cursor__circle {
-        position: relative;
-        @include interactive;
-
-        //&::before,
-        //&::after {
-        //  content: '';
-        //  position: absolute;
-        //  width: 5px;
-        //  height: 5px;
-        //  top: 50%;
-        //  background-color: $dark;
-        //}
-      }
-    }
+    //
+    //&.cursor--interactive-drag {
+    //  .cursor__circle {
+    //    position: relative;
+    //    @include interactive;
+    //
+    //    //&::before,
+    //    //&::after {
+    //    //  content: '';
+    //    //  position: absolute;
+    //    //  width: 5px;
+    //    //  height: 5px;
+    //    //  top: 50%;
+    //    //  background-color: $dark;
+    //    //}
+    //  }
+    //}
   }
 }
 
-@keyframes changeMixBlendMode {
-  to {
-    mix-blend-mode: normal;
-  }
-}
+//@keyframes changeMixBlendMode {
+//  to {
+//    mix-blend-mode: normal;
+//  }
+//}

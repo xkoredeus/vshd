@@ -6183,12 +6183,14 @@ a:hover {
 
 #cursor {
   position: fixed;
-  z-index: 1109;
+  z-index: 2999;
   left: 0;
   top: 0;
   pointer-events: none;
   will-change: transform;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -6207,51 +6209,28 @@ a:hover {
     height: 20px;
   }
   #cursor.cursor--dark-button {
-    -webkit-animation: changeMixBlendMode .5s ease;
-            animation: changeMixBlendMode .5s ease;
-    -webkit-animation-delay: .5s;
-            animation-delay: .5s;
     mix-blend-mode: normal;
   }
   #cursor.cursor--dark-button .cursor__circle {
     width: 20px;
     height: 20px;
+    background-color: #D9C557;
   }
   #cursor.cursor--light-button {
-    -webkit-animation: changeMixBlendMode .5s ease;
-            animation: changeMixBlendMode .5s ease;
-    -webkit-animation-delay: .5s;
-            animation-delay: .5s;
+    mix-blend-mode: normal;
   }
   #cursor.cursor--light-button .cursor__circle {
     background-color: #222829;
     width: 20px;
     height: 20px;
   }
+  #cursor.cursor--dark-interactive {
+    mix-blend-mode: normal;
+  }
   #cursor.cursor--dark-interactive .cursor__circle {
     background-color: #222829;
     width: 20px;
     height: 20px;
-  }
-  #cursor.cursor--dark-not-interactive {
-    mix-blend-mode: normal;
-  }
-  #cursor.cursor--interactive-drag .cursor__circle {
-    position: relative;
-    width: 20px;
-    height: 20px;
-  }
-}
-
-@-webkit-keyframes changeMixBlendMode {
-  to {
-    mix-blend-mode: normal;
-  }
-}
-
-@keyframes changeMixBlendMode {
-  to {
-    mix-blend-mode: normal;
   }
 }
 
