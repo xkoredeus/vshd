@@ -9,6 +9,10 @@
         order: 1;
         margin-bottom: 10px;
       }
+
+      &:hover {
+        color: $dark;
+      }
     }
 
     &-top {

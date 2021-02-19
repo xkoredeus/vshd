@@ -27,6 +27,10 @@
         border-radius: 50%;
         margin-left: 10px;
         @include flex-center;
+
+        @include rmin(1466) {
+          border-width: 2px;
+        }
       }
     }
   }
@@ -56,7 +60,7 @@
       padding: 8px 0;
 
       @include rmin(1200) {
-        padding: 15px 0;
+        padding: 25px 0 15px;
       }
 
       &::before {

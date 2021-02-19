@@ -122,6 +122,12 @@
           clear: both;
         }
       }
+
+      @include rmin(1466) {
+        .news__item-bottom {
+          transform: translateY(1px);
+        }
+      }
     }
   }
 

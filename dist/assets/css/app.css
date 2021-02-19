@@ -5558,16 +5558,19 @@ select {
   background-color: transparent;
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
+  cursor: none !important;
 }
 
 option {
   color: #000000;
+  cursor: none !important;
 }
 
 textarea {
   resize: none !important;
   overflow: hidden;
   border-radius: none;
+  cursor: none !important;
 }
 
 textarea::-webkit-input-placeholder {
@@ -5643,6 +5646,7 @@ input[type="number"] {
 .checkbox {
   position: relative;
   margin-bottom: 0;
+  cursor: none !important;
 }
 
 .checkbox__gal {
@@ -5891,6 +5895,7 @@ button {
 .swiper-container > .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
+  cursor: none !important;
 }
 
 .swiper-container > .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
@@ -5956,6 +5961,10 @@ button {
 /*.fancybox-slide {
   @include scroll;
 }*/
+html, a, button {
+  cursor: none !important;
+}
+
 html, body {
   position: relative;
   font-family: "Arimo", sans-serif;
@@ -7132,6 +7141,13 @@ body.show-menu .header__hamb-icon--2 {
   clear: both;
 }
 
+@media only screen and (min-width: 1466px) {
+  .news__item--wide .news__item-bottom {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+  }
+}
+
 .news-layout__grid {
   grid-row-gap: 20px;
 }
@@ -7307,6 +7323,10 @@ body.show-menu .header__hamb-icon--2 {
   }
 }
 
+.news-page__info-link:hover {
+  color: #222829;
+}
+
 @media only screen and (max-width: 768px) {
   .news-page__info-top {
     -webkit-box-ordinal-group: 3;
@@ -7414,6 +7434,12 @@ body.show-menu .header__hamb-icon--2 {
           align-items: center;
 }
 
+@media only screen and (min-width: 1466px) {
+  .project-page__banner-button-icon {
+    border-width: 2px;
+  }
+}
+
 .project-page__begin .layout__grid {
   grid-template-rows: repeat(3, auto);
 }
@@ -7441,7 +7467,7 @@ body.show-menu .header__hamb-icon--2 {
 
 @media only screen and (min-width: 1200px) {
   .project-page__testimonials-item {
-    padding: 15px 0;
+    padding: 25px 0 15px;
   }
 }
 
@@ -8017,6 +8043,10 @@ body.show-menu .header__hamb-icon--2 {
   [class*="ymaps-2"][class*="-balloon_layout_panel"] {
     background: #D9C557;
   }
+}
+
+[class*="ymaps-2"][class*="-events-pane"] {
+  cursor: none !important;
 }
 
 .balloon__content {
