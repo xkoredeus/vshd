@@ -30,12 +30,32 @@ button {
   }
 
   &--tr {
+    position: relative;
     font-size: 1.4286rem;
     color: $olive;
     background-color: $tr;
     border-color: $tr;
     padding: 0;
     text-transform: uppercase;
+    display: inline-block;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      background-color: $dark;
+      @include cubic;
+    }
+
+    &:hover {
+      color: $dark;
+      &::before {
+        width: 100%;
+      }
+    }
   }
 
   &--circle {
@@ -56,6 +76,10 @@ button {
 
     &:hover {
       color: $white;
+
+      .button--circle__icon {
+        transform: translateX(5px);
+      }
     }
 
     &__in {
@@ -69,6 +93,7 @@ button {
     &__icon {
       fill: $white;
       margin-left: 25px;
+      @include ease;
 
       @include rmin(1480) {
         width: 25px;

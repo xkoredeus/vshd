@@ -109,12 +109,12 @@
         /*}*/
     </style>
     <div class="preloader__wrapper">
-        <div class="preloader__overlay"></div>
+        <div class="preloader__overlay js-preloader-overlay"></div>
         <div class="preloader__first-text js-preloader-first-text">Human oriented development</div>
-        <div class="preloader__text-base">
+        <div class="preloader__text-base js-preloader-base">
             <div class="preloader__text">
-                <div class="preloader__text-decoration preloader__text-decoration--1"></div>
-                <svg width="101" height="15" class="preloader__text-icon" viewBox="0 0 101 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="preloader__text-decoration preloader__text-decoration--1 js-preloader-decoration-1"></div>
+                <svg width="101" height="15" class="preloader__text-icon js-preloader-text-icon" viewBox="0 0 101 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M36.5096 4.74805C34.6658 4.74805 33.1582 5.93379 33.1582 7.39317C33.1582 9.42009 34.9103 9.76467 36.4688 10.0586C37.9765 10.3525 39.1581 10.5754 39.1581 11.974C39.1581 13.0381 37.9765 13.9097 36.5198 13.9097C35.0631 13.9097 33.8814 13.0381 33.8814 11.974V11.8727H33.1684V11.974C33.1684 13.4334 34.676 14.6191 36.5198 14.6191C38.3737 14.6191 39.8813 13.4334 39.8813 11.974C39.8813 9.98763 38.1496 9.65319 36.6115 9.35929C35.0835 9.06538 33.8814 8.83229 33.8814 7.39317C33.8814 6.32904 35.0631 5.45747 36.5198 5.45747C37.9765 5.45747 39.1581 6.32904 39.1581 7.39317V7.49452H39.8712V7.39317C39.861 5.94393 38.3534 4.74805 36.5096 4.74805Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
                     <path d="M21.2397 4.74805C18.5097 4.74805 16.2891 6.95739 16.2891 9.67345C16.2891 12.3895 18.5097 14.5989 21.2397 14.5989C23.9697 14.5989 26.1904 12.3895 26.1904 9.67345C26.1904 6.95739 23.9697 4.74805 21.2397 4.74805ZM21.2397 13.8894C18.907 13.8894 17.0021 11.9943 17.0021 9.67345C17.0021 7.35263 18.907 5.45747 21.2397 5.45747C23.5725 5.45747 25.4773 7.35263 25.4773 9.67345C25.4773 12.0044 23.5725 13.8894 21.2397 13.8894Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
                     <path d="M78.7847 4.74805C76.0547 4.74805 73.834 6.95739 73.834 9.67345C73.834 12.3895 76.0547 14.5989 78.7847 14.5989C81.5147 14.5989 83.7354 12.3895 83.7354 9.67345C83.7354 6.95739 81.5147 4.74805 78.7847 4.74805ZM78.7847 13.8894C76.4519 13.8894 74.547 11.9943 74.547 9.67345C74.547 7.35263 76.4418 5.45747 78.7847 5.45747C81.1174 5.45747 83.0223 7.35263 83.0223 9.67345C83.0223 12.0044 81.1174 13.8894 78.7847 13.8894Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
@@ -123,15 +123,8 @@
                     <path d="M49.5177 0.350098H48.8047V5.03227H49.5177V0.350098Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
                     <path d="M99.8602 7.1399C98.9638 5.66025 97.3747 4.74814 95.6226 4.74814C92.8926 4.74814 90.6719 6.95748 90.6719 9.67355C90.6719 12.3896 92.8926 14.599 95.6226 14.599C97.3747 14.599 98.9638 13.697 99.8602 12.2072V14.3659H100.573V0.359863H99.8602V7.1399ZM95.6226 13.8896C93.2898 13.8896 91.3849 11.9944 91.3849 9.67355C91.3849 7.35273 93.2898 5.45756 95.6226 5.45756C97.9553 5.45756 99.8602 7.35273 99.8602 9.67355C99.8602 12.0045 97.9553 13.8896 95.6226 13.8896Z" fill="white" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
                 </svg>
-                <div class="preloader__text-decoration preloader__text-decoration--2"></div>
+                <div class="preloader__text-decoration preloader__text-decoration--2 js-preloader-decoration-2"></div>
             </div>
-        </div>
-    
-        <div class="preloader">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
         </div>
     </div>
     <div id="cursor">
@@ -221,7 +214,7 @@
                     </div>
                 </section>
                 
-                <section class="news-page__section nominal--tight section--inner">
+                <section class="news-page__section news-page__section--rtl-mobile nominal--tight section--inner">
                     <div class="layout__grid">
                         <div class="nominal--tight__info">
                             <a class="button--circle button--circle--olive" cursor-class="cursor--light-button" href="#">

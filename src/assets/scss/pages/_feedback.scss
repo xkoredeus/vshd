@@ -32,9 +32,31 @@
     align-items: center;
     grid-column: 11/13;
 
+    span:first-child {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background-color: $olive;
+        @include cubic;
+      }
+    }
+
     &-icon {
       fill: $olive;
       margin-left: 35px;
+    }
+
+    &:hover {
+      span:first-child {
+        &::before {
+          width: 100%;
+        }
+      }
     }
   }
 

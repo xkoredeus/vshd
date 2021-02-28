@@ -1,17 +1,34 @@
 .news-page {
   &__info {
     &-link {
+      position: relative;
       font-size: 0.8571rem;
       text-transform: uppercase;
+      align-self: flex-start;
       display: inline-block;
 
       @include r(768) {
-        order: 1;
-        margin-bottom: 10px;
+        order: 2;
+        margin-top: 10px;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background-color: $dark;
+        @include cubic;
       }
 
       &:hover {
         color: $dark;
+
+        &::before {
+          width: 100%;
+        }
       }
     }
 
@@ -30,8 +47,10 @@
   }
 
   &__crumbs {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+    z-index: 1;
 
     &-item {
       font-size: 0.8571rem;
@@ -43,11 +62,61 @@
       &:not(:last-child) {
         color: $olive;
         margin-right: 15px;
+        span {
+          position: relative;
+          @include ease;
+
+          &::before {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 1px;
+            left: 0;
+            bottom: 0;
+            background-color: $dark;
+            @include cubic;
+          }
+        }
+
+        &:hover {
+          color: $dark;
+          span {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
       }
 
       &-arrow {
         fill: $olive;
         margin-left: 15px;
+      }
+    }
+  }
+
+  &__section {
+    &:first-child {
+      margin-top: 10px;
+
+      @include rmin(1200) {
+        .nominal--tight__right {
+          transform: translateY(-3px);
+        }
+      }
+    }
+
+    @include rmin(1200) {
+      .nominal--tight__right {
+        grid-column: 5/12;
+      }
+    }
+
+    @include r(768) {
+      &--rtl-mobile {
+        .nominal--tight__info {
+          grid-row: 2/3;
+        }
       }
     }
   }

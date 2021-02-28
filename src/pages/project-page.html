@@ -21,8 +21,9 @@ layout: default--project-page
     <div class="layout__grid">
         <div class="nominal--tight__info">
             <div class="section__title--small mb-3">ЭКСКЛЮЗИВНЫЕ РЕЗИДЕНЦИи в&nbsp;ДВУХ&nbsp;ШАГАХ ОТ ТРЕТЬЯКОВСКОЙ ГАЛЕРЕИ</div>
-            <div class="section__subtitle mb-5">cтаромонетный пер., 19/11 </div>
-            <a class="button--circle button--circle--olive" cursor-class="cursor--light-button" href="#">
+            <div class="section__subtitle mb-md-5">cтаромонетный пер., 19/11 </div>
+            <!-- todo: Don't forget duplicate links in section `project-page__mobile-links` which displays in less md devices -->
+            <a class="d-none d-md-flex button--circle button--circle--olive" cursor-class="cursor--light-button" href="#">
                 <span class="button--circle__in">
                     <span class="button--circle__text">перейти на сайт проекта</span>
                     <svg class="button--circle__icon" width="15" height="8">
@@ -39,7 +40,7 @@ layout: default--project-page
             <p class="nominal__text">Отличительной особенностью проекта является его сервисная составляющая. В дополнение к основному лифту, приходящему непосредственно в квартиру, предусмотрен сервисный лифт, который обеспечит доступ для обслуживающего персонала.</p>
         </div>
         <div class="project-page__testimonials-list">
-            <div class="project-page__testimonials-item">Преимущества: Камерная атмосфера</div>
+            <div class="project-page__testimonials-item"><span>Преимущества:</span> Камерная атмосфера</div>
             <div class="project-page__testimonials-item">Закрытая инфраструктура для жителей</div>
             <div class="project-page__testimonials-item">Гипоаллергенный сад</div>
             <div class="project-page__testimonials-item">Консьерж-служба</div>
@@ -50,8 +51,8 @@ layout: default--project-page
             <div class="project-page__testimonials-item">Отдельные черные кухни для персонала</div>
             <div class="project-page__testimonials-item">Пентхаусы с террасами</div>
         </div>
-
-        <a class="project-page__pdf" cursor-class="cursor--dark-interactive" href="#" target="_blank">
+        <!-- todo: Don't forget duplicate links in section `project-page__mobile-links` which displays in less md devices -->
+        <a class="project-page__pdf d-none d-md-flex" cursor-class="cursor--dark-interactive" href="#" target="_blank">
             <svg class="project-page__pdf-icon" width="32" height="44">
                 <use xlink:href="#document"></use>
             </svg>
@@ -131,6 +132,22 @@ layout: default--project-page
         </div>
         <div class="swiper-pagination"></div>
     </div>
+</section>
+<section class="project-page__mobile-links section--inner d-md-none">
+    <a class="button--circle button--circle--olive" cursor-class="cursor--light-button" href="#">
+        <span class="button--circle__in">
+            <span class="button--circle__text">перейти на сайт проекта</span>
+            <svg class="button--circle__icon" width="15" height="8">
+                <use xlink:href="#arrow--right"></use>
+            </svg>
+        </span>
+    </a>
+    <a class="project-page__pdf" cursor-class="cursor--dark-interactive" href="#" target="_blank">
+        <svg class="project-page__pdf-icon" width="32" height="44">
+            <use xlink:href="#document"></use>
+        </svg>
+        <span>Pdf</span>
+    </a>
 </section>
 <section class="section--wide pb-0">
     <div class="section__subtitle">Новости проекта</div>

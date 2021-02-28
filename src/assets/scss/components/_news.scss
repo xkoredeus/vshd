@@ -4,6 +4,7 @@
 
     @include r(768) {
       grid-column: span 6;
+      margin-bottom: 10px;
     }
 
     @include r(576) {
@@ -78,6 +79,7 @@
       display: grid;
       grid-template-columns: auto auto;
       align-items: center;
+      justify-content: space-between;
     }
 
     &-date {
@@ -85,8 +87,28 @@
     }
 
     &-link {
+      position: relative;
       color: $olive;
       text-align: right;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background-color: $dark;
+        @include cubic;
+      }
+
+      &:hover {
+        color: $dark;
+
+        &::before {
+          width: 100%;
+        }
+      }
     }
 
     &--wide {
@@ -133,5 +155,19 @@
 
   &-layout__grid {
     grid-row-gap: 20px;
+  }
+
+  &__begin {
+    @include r(768) {
+      .nominal__picture-wrapper {
+        grid-row: 2/3;
+        margin-top: 0;
+      }
+
+      .button--circle {
+        grid-row: 3/4;
+        margin-top: -140px;
+      }
+    }
   }
 }

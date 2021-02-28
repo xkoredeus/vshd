@@ -23,7 +23,6 @@
     transform: translate(-50%, -50%) scale(2.5);
     background: $olive;
     background: radial-gradient(circle, $olive 36%, $tr 55%, $tr 100%);
-    @include ease;
   }
 
   &__first-text {
@@ -59,21 +58,26 @@
       @include flex-center;
       transform: translate(-50%, -50%);
       opacity: 0;
+      overflow: hidden;
     }
 
     &-decoration {
       position: absolute;
-      width: 3px;
+      width: 50%;
       height: 20px;
       bottom: 0;
-      background-color: $white;
+      background-color: $olive;
 
       &--1 {
-        left: -17px;
+        //left: -17px;
+        left: 50%;
+        border-left: 3px solid $white;
       }
 
       &--2 {
-        right: -18px;
+        //right: -18px;
+        right: 50%;
+        border-right: 3px solid $white;
       }
     }
   }

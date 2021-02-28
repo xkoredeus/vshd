@@ -1,19 +1,40 @@
 .project-page {
   &__banner {
-    padding-top: 60px;
-
     &-button {
+      margin-top: 80px;
       text-transform: uppercase;
       grid-column: 9/13;
       display: flex;
       align-items: center;
 
       @include r(768) {
-        grid-column: 8/13;
+        margin-top: 20px;
+        grid-column: 2;
+      }
+
+      span:first-child {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 1px;
+          left: 0;
+          bottom: 0;
+          background-color: $dark;
+          @include cubic;
+        }
       }
 
       &:hover {
         color: $dark;
+        
+        span:first-child {
+          &:before {
+            width: 100%;
+          }
+        }
       }
 
       &-icon {
@@ -49,7 +70,18 @@
       grid-column: span 4;
 
       @include r(1200) {
-        grid-column: span 8;
+        grid-column: span 12;
+
+        span {
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+
+      @include r(768) {
+        &:nth-child(4) {
+          margin-top: -10px;
+        }
       }
     }
 

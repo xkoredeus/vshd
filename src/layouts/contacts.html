@@ -10,6 +10,7 @@
     <meta name="theme-color" content="#D9C557">
     <link rel="shortcut icon" href="{{root}}assets/img/favicon.ico" type="image/x-icon">
     <title>New Project</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
 </head>
 
@@ -21,7 +22,7 @@
         <div class="layout__overlay"></div>
         <div class="layout__in">
             {{> header--contacts}}
-            <main class="layout__main">
+            <main class="layout__main contacts__layout">
                 {{> body}}
             </main>
             {{> footer}}
@@ -29,7 +30,7 @@
     </div>
 
     {{> svg}}
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=29312f42-f60c-4b51-a52b-8f057013f3f0&lang=ru_RU"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
     <script src="{{root}}assets/js/app.js"></script>
     <script src="{{root}}assets/js/map.js"></script>
 </body>
