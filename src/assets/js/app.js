@@ -52,7 +52,7 @@ $(() => {
             ease: 'power1.inOut',
           },
         })
-        .to(wrapper, {autoAlpha: 0, duration: 0.8, delay: 0.3});
+        .to(wrapper, {autoAlpha: 0, duration: 0.8, delay: 0.8});
 
     preloaderAnimation
       .add(preloaderTimeline1, 0)

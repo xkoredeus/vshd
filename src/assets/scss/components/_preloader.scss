@@ -32,12 +32,16 @@
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    white-space: nowrap;
     text-align: center;
     color: $white;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    //opacity: 0;
+
+    @include r(768) {
+      font-size: 14px;
+    }
   }
 
   &__text {
@@ -69,13 +73,11 @@
       background-color: $olive;
 
       &--1 {
-        //left: -17px;
         left: 50%;
         border-left: 3px solid $white;
       }
 
       &--2 {
-        //right: -18px;
         right: 50%;
         border-right: 3px solid $white;
       }
