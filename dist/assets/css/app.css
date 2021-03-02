@@ -7438,7 +7438,7 @@ body.show-menu .header__hamb-icon--2 {
 }
 
 .news-page__section:first-child {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -7745,7 +7745,7 @@ body.show-menu .header__hamb-icon--2 {
 }
 
 .partners__slider {
-  height: 330px;
+  height: 250px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -7766,7 +7766,7 @@ body.show-menu .header__hamb-icon--2 {
 
 @media only screen and (min-width: 768px) {
   .partners__slider .swiper-slide {
-    height: calc((100% - 30px) / 2);
+    height: calc((100% - 60px) / 2);
   }
 }
 

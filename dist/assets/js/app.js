@@ -203,7 +203,6 @@ $(() => {
 
 $(() => {
   const partnersSlider = new Swiper('.js-partners-slider', {
-    spaceBetween: 10,
     pagination: {
       el: '.js-partners-slider .swiper-pagination',
       clickable: true
@@ -212,17 +211,21 @@ $(() => {
     breakpoints: {
       0: {
         slidesPerView: 1,
+        spaceBetween: 10,
       },
       576: {
         slidesPerView: 2,
+        spaceBetween: 10,
       },
       768: {
         slidesPerView: 3,
         slidesPerColumn: 2,
+        spaceBetween: 10,
       },
       992: {
         slidesPerView: 4,
         slidesPerColumn: 2,
+        spaceBetween: 45,
       },
     }
   });
