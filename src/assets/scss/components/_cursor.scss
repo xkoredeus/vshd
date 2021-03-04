@@ -5,8 +5,9 @@
   top: 0;
   pointer-events: none;
   will-change: transform;
-  mix-blend-mode: difference;
+  //mix-blend-mode: difference;
   backface-visibility: hidden;
+  transition: mix-blend-mode 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -16,13 +17,13 @@
     margin-top: -50%;
     margin-left: -50%;
     border-radius: 50%;
-    background-color: #fff;
-    //background-color: $olive;
+    //background-color: #fff;
+    background-color: $olive;
     transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1),
     background-color 0.5s cubic-bezier(0.25, 1, 0.5, 1),
     border-color 0.5s cubic-bezier(0.25, 1, 0.5, 1),
     width 0.5s cubic-bezier(0.25, 1, 0.5, 1),
-    height 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    height 0.5s cubic-bezier(0.25, 1, 0.5, 1);
     //mix-blend-mode 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   }
 

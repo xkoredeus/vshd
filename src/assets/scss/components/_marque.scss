@@ -1,9 +1,19 @@
 .marquee {
   position: relative;
   padding: 140px 0;
+  white-space: nowrap;
+
+  @include r(1200) {
+    padding: 60px 0;
+    white-space: normal;
+  }
 
   &__in {
     height: 91px;
+
+    @include r(1200) {
+      display: none;
+    }
   }
 
   &__text {
@@ -11,9 +21,15 @@
     font-family: $Circe;
     font-size: 6.4286rem;
     text-transform: uppercase;
-    width: calc(100% + 20px);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: inline-block;
+    left: calc(100% + 20px);
+    top: 140px;
+
+    @include r(1200) {
+      font-size: 3.0714rem;
+      position: relative;
+      left: 0;
+      top: 0;
+    }
   }
 }

@@ -11,9 +11,18 @@
       grid-column: span 12;
     }
 
+    &--tr {
+      .news__item-top {
+        background-color: $tr;
+      }
+    }
+
     &-top {
       width: 100%;
       margin-bottom: 12px;
+      background-color: $dark;
+      overflow: hidden;
+      transform-origin: 0 100%;
 
       &--olive {
         background-color: $olive;
@@ -25,6 +34,7 @@
       height: 100%;
       @include cv;
       display: block;
+      transition: none;
 
       &::before {
         content: '';

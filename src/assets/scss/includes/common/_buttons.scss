@@ -67,6 +67,7 @@ button {
     border-radius: 50%;
     background-color: $dark;
     @include flex-center;
+    transition: none;
 
     &::before {
       content: '';

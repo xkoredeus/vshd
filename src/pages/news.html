@@ -23,7 +23,7 @@ layout: default--news
 </section>
 <section class="section--inner news">
     <div class="layout__grid news-layout__grid">
-        <div class="news__item">
+        <div class="news__item news__item--tr">
             <div class="news__item-top">
                 <a class="news__item-picture news__item-picture--circle" cursor-class="cursor--dark-button" style="background-image: url({{root}}assets/img/news__picture--1.jpg);" href="news-page.html"></a>
             </div>
@@ -85,4 +85,7 @@ layout: default--news
         </div>
     </div>
 </section>
-{{> marquee}}
+<section class="marquee d-none d-xl-block">
+    <div class="marquee__in"></div>
+    <div class="marquee__text">Дэвид чиперфилд</div>
+</section>

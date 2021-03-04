@@ -37,6 +37,10 @@
     position: relative;
     display: block;
     margin-bottom: 10px;
+    transition: unset;
+    overflow: hidden;
+    transform-origin: 0 100%;
+    background-color: $dark;
   }
 
   &__in {
@@ -81,8 +85,27 @@
       @include ease;
     }
 
+    span {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background-color: $dark;
+        @include cubic;
+      }
+    }
+
     &:hover {
       color: $dark;
+      span {
+        &::before {
+          width: 100%;
+        }
+      }
       .project__link-arrow {
         transform: translateX(4px);
         //fill: $olive;
