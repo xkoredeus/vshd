@@ -196,7 +196,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include rmin(1800) {
+    @include rmin(1400) {
       width: 139px;
     }
   }
@@ -215,6 +215,8 @@
   }
 
   &__name {
-    white-space: nowrap;
+    @include rmin(1400) {
+      white-space: nowrap;
+    }
   }
 }

@@ -8302,7 +8302,7 @@ body.sticky-header.show-menu .header__logo-icon--black {
           justify-content: space-between;
 }
 
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1400px) {
   .balloon__content {
     width: 139px;
   }
@@ -8328,8 +8328,10 @@ body.sticky-header.show-menu .header__logo-icon--black {
   color: #ffffff;
 }
 
-.balloon__name {
-  white-space: nowrap;
+@media only screen and (min-width: 1400px) {
+  .balloon__name {
+    white-space: nowrap;
+  }
 }
 
 .unknown {
