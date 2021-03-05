@@ -1,66 +1,77 @@
 $(() => {
   $(window).on('load', function preloader() {
     // gsap
-    gsap.config({nullTargetWarn:false});
-    const wrapper = $('.preloader__wrapper');
-    const overlay = $('.js-preloader-overlay');
-    const text = $('.js-preloader-first-text');
-    const base = $('.js-preloader-base');
-    const promo = $('.js-preloader-text-icon');
-    const leftDecoration = $('.js-preloader-decoration-1');
-    const rightDecoration = $('.js-preloader-decoration-2');
+    // gsap.config({nullTargetWarn:false});
+    // const wrapper = $('.preloader__wrapper');
+    // const overlay = $('.js-preloader-overlay');
+    // const text = $('.js-preloader-first-text');
+    // const base = $('.js-preloader-base');
+    // const promo = $('.js-preloader-text-icon');
+    // const leftDecoration = $('.js-preloader-decoration-1');
+    // const rightDecoration = $('.js-preloader-decoration-2');
+    //
+    // const preloaderAnimation = gsap.timeline({
+    //   defaults: {
+    //     duration: 4,
+    //     ease: "power1.inOut",
+    //   },
+    // });
+    //
+    // const preloaderTimeline1 = gsap
+    //   .timeline({
+    //     defaults: {
+    //       duration: 0.7,
+    //       ease: 'power1.inOut',
+    //     },
+    //   })
+    //   .to(text, {autoAlpha: 0, duration: 0.7});
+    //
+    // const preloaderTimeline2 = gsap
+    //   .timeline({
+    //     defaults: {
+    //       duration: 1,
+    //       ease: 'power1.inOut',
+    //     },
+    //   })
+    //   .to(base, {autoAlpha: 1, duration: 0.3})
+    //   .to(leftDecoration, { left: 'calc(100% + 17px)', duration: 0.5, stagger: 0.2 })
+    //   .to(rightDecoration, { right: 'calc(100% + 17px)', duration: 0.5, delay: -0.5 });
+    //
+    // const preloaderTimeline3 = gsap
+    //     .timeline({
+    //       defaults: {
+    //         duration: 2,
+    //         ease: 'power1.inOut',
+    //       },
+    //     })
+    //     .to(overlay, {scale: 0, duration: 1.5});
+    //
+    // const preloaderTimeline4 = gsap
+    //     .timeline({
+    //       defaults: {
+    //         ease: 'power1.inOut',
+    //       },
+    //     })
+    //     .to(wrapper, {autoAlpha: 0, duration: 0.8, delay: 0.8});
+    //
+    // preloaderAnimation
+    //   .add(preloaderTimeline1, 0)
+    //   .add(preloaderTimeline2, 1)
+    //   .add(preloaderTimeline3, 2)
+    //   .add(preloaderTimeline4, 3);
 
-    const preloaderAnimation = gsap.timeline({
-      defaults: {
-        duration: 4,
-        ease: "power1.inOut",
-      },
-    });
+    $('.preloader__wrapper').fadeOut();
+  });
+});
 
-    const preloaderTimeline1 = gsap
-      .timeline({
-        defaults: {
-          duration: 0.7,
-          ease: 'power1.inOut',
-        },
-      })
-      .to(text, {autoAlpha: 0, duration: 0.7});
-
-    const preloaderTimeline2 = gsap
-      .timeline({
-        defaults: {
-          duration: 1,
-          ease: 'power1.inOut',
-        },
-      })
-      .to(base, {autoAlpha: 1, duration: 0.3})
-      .to(leftDecoration, { left: 'calc(100% + 17px)', duration: 0.5, stagger: 0.2 })
-      .to(rightDecoration, { right: 'calc(100% + 17px)', duration: 0.5, delay: -0.5 });
-
-    const preloaderTimeline3 = gsap
-        .timeline({
-          defaults: {
-            duration: 2,
-            ease: 'power1.inOut',
-          },
-        })
-        .to(overlay, {scale: 0, duration: 1.5});
-
-    const preloaderTimeline4 = gsap
-        .timeline({
-          defaults: {
-            ease: 'power1.inOut',
-          },
-        })
-        .to(wrapper, {autoAlpha: 0, duration: 0.8, delay: 0.8});
-
-    preloaderAnimation
-      .add(preloaderTimeline1, 0)
-      .add(preloaderTimeline2, 1)
-      .add(preloaderTimeline3, 2)
-      .add(preloaderTimeline4, 3);
-
-    // $('.preloader__wrapper').fadeOut();
+$(() => {
+  //sticky header
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 5){
+      $('body').addClass('sticky-header');
+    } else{
+      $('body').removeClass('sticky-header');
+    }
   });
 });
 
@@ -99,21 +110,22 @@ $(() => {
         delay: -0.8,
       });
 
-      animateIn.fromTo(info, {
+      const animateIn2 = gsap.timeline({
+        defaults: {
+          ease: "power1.inOut"
+        },
+        scrollTrigger: {
+          trigger: el,
+          start: "top center",
+          // toggleActions: "play none none reverse",
+        }
+      });
+
+      animateIn2.fromTo([info, button], {
         autoAlpha: 0,
       }, {
         autoAlpha: 1,
         duration: 0.5,
-        delay: 0
-      });
-
-      animateIn.fromTo(button, {
-        autoAlpha: 0,
-        // scale: 0.5,
-      }, {
-        autoAlpha: 1,
-        // scale: 1,
-        duration: 0.6,
       });
     } else {
       const animateIn = gsap.timeline({
@@ -158,7 +170,7 @@ $(() => {
       }, {
         autoAlpha: 1,
         duration: 0.5,
-        delay: 0
+        delay: -0.2,
       });
 
       animateIn2.fromTo(button, {
@@ -168,6 +180,7 @@ $(() => {
         autoAlpha: 1,
         scale: 1,
         duration: 0.6,
+        delay: -0.2
       });
 
     }
@@ -285,6 +298,17 @@ $(() => {
         // toggleActions: "play none none reverse",
       }
     });
+
+    const animateIn2 = gsap.timeline({
+      defaults: {
+        ease: "power3.inOut"
+      },
+      scrollTrigger: {
+        trigger: sectionSubscribe,
+        start: "top center",
+        // toggleActions: "play none none reverse",
+      }
+    });
     animateIn.fromTo(pictureWrapper, {
       scaleX: 0,
     }, {
@@ -308,12 +332,14 @@ $(() => {
       delay: 0.1
     });
 
-    animateIn.fromTo(button, {
+
+
+    animateIn2.fromTo(button, {
       autoAlpha: 0,
     }, {
       autoAlpha: 1,
       duration: 0.5,
-      delay: 0.1
+      delay: 0.4
     });
   });
 

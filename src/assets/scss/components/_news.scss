@@ -101,23 +101,23 @@
       color: $olive;
       text-align: right;
 
-      &::before {
-        position: absolute;
-        content: '';
-        width: 0;
-        height: 1px;
-        left: 0;
-        bottom: 0;
-        background-color: $dark;
-        @include cubic;
-      }
+      //&::before {
+      //  position: absolute;
+      //  content: '';
+      //  width: 0;
+      //  height: 1px;
+      //  left: 0;
+      //  bottom: 0;
+      //  background-color: $dark;
+      //  @include cubic;
+      //}
 
       &:hover {
-        color: $dark;
+        color: $olive;
 
-        &::before {
-          width: 100%;
-        }
+        //&::before {
+        //  width: 100%;
+        //}
       }
     }
 

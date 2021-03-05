@@ -61,6 +61,11 @@ a {
   &__in {
     margin: 0 auto;
     height: 100%;
+    padding-top: 105px;
+
+    @include r(768) {
+      padding-top: 170px;
+    }
 
     &--form {
       min-height: calc(100vh - 20px);

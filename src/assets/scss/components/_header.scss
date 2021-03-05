@@ -1,6 +1,13 @@
 .header {
-  position: relative;
-  margin-bottom: 5px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  background-color: #fff;
+  transform: translateX(-50%);
+  padding: 10px;
+  z-index: 2;
+  overflow: hidden;
 
   @include r(1200) {
     z-index: 2001;
@@ -14,24 +21,23 @@
     position: relative;
 
     @include r(768) {
-      grid-row-gap: 20px;
       grid-column-gap: 0;
     }
   }
 
   &__logo {
+    position: relative;
     width: 100%;
     background-color: $olive;
     border-radius: 50%;
+    max-width: 96px;
+    max-height: 96px;
+    padding: 15px;
 
     grid-column: 1/2;
     grid-row: 1/3;
 
     @include flex-center;
-
-    @include r(1200) {
-      padding: 15px;
-    }
 
     &::before {
       content: '';
@@ -42,6 +48,7 @@
     &-icon {
       position: relative;
       z-index: 1110;
+      @include ease;
 
       @include rmin(1200) {
         width: 65px;
@@ -51,6 +58,20 @@
       @include rmin(1800) {
         width: 90px;
         height: 18px;
+      }
+
+      &--black {
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        //transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        @include ease;
+
+        @include r(768) {
+          bottom: -13px;
+        }
       }
     }
   }
@@ -92,16 +113,16 @@
       position: relative;
       text-transform: uppercase;
 
-      &::after {
-        position: absolute;
-        content: '';
-        width: 0;
-        height: 1px;
-        left: 0;
-        bottom: 0;
-        background-color: $dark;
-        @include cubic;
-      }
+      //&::after {
+      //  position: absolute;
+      //  content: '';
+      //  width: 0;
+      //  height: 1px;
+      //  left: 0;
+      //  bottom: 0;
+      //  background-color: $dark;
+      //  @include cubic;
+      //}
 
       @include r(1200) {
         font-size: 3.0714rem;
@@ -110,11 +131,11 @@
       }
 
       &:hover {
-        color: $dark;
+        color: $olive;
 
-        &::after {
-          width: 100%;
-        }
+        //&::after {
+        //  width: 100%;
+        //}
       }
 
       &--here {
@@ -148,12 +169,15 @@
     grid-column: 5/13;
     grid-row: 2/2;
     align-self: flex-end;
+    height: 100%;
+    @include ease;
 
     @include r(1200) {
       grid-column: 3/13;
     }
 
     @include r(768) {
+      padding-top: 20px;
       grid-column: span 13;
       grid-row: 3/4;
     }
@@ -161,6 +185,7 @@
 
   &__title {
     margin-bottom: 0;
+    @include ease;
 
     &.section__title--big {
       @include rmin(1200) {
@@ -206,23 +231,23 @@
       bottom: -2px;
     }
 
-    &::before {
-      position: absolute;
-      content: '';
-      width: 0;
-      height: 1px;
-      left: 0;
-      bottom: 0;
-      background-color: $dark;
-      @include cubic;
-    }
+    //&::before {
+    //  position: absolute;
+    //  content: '';
+    //  width: 0;
+    //  height: 1px;
+    //  left: 0;
+    //  bottom: 0;
+    //  background-color: $dark;
+    //  @include cubic;
+    //}
 
-    &:hover {
-      color: $dark;
-      &::before {
-        width: 100%;
-      }
-    }
+    //&:hover {
+      //color: $dark;
+      //&::before {
+      //  width: 100%;
+      //}
+    //}
   }
 
   &__hamb {
@@ -258,6 +283,7 @@ body.show-menu {
   }
 
   .header {
+    overflow: visible;
     &__nav {
       opacity: 1;
       visibility: visible;
@@ -319,5 +345,74 @@ body.show-menu {
     //  transform: translate(-50%, 0);
     //}
 
+  }
+}
+
+body.sticky-header {
+  .header {
+
+    &__logo {
+      margin-top: -87%;
+      background-color: $tr;
+
+      @include r(1200) {
+        margin-top: -90%;
+      }
+
+      @include r(768) {
+        margin-top: -97%;
+      }
+
+      &-icon {
+        visibility: hidden;
+        opacity: 0;
+
+        &--black {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    &__bottom {
+      margin-bottom: -25%;
+      opacity: 0;
+      visibility: hidden;
+
+      @include r(1200) {
+        margin-bottom: -22px;
+        max-height: 40px;
+      }
+
+      @include r(768) {
+        padding-top: 0;
+      }
+
+      & > * {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+body.sticky-header.show-menu {
+  .header {
+    overflow: visible;
+
+    &__logo {
+      margin-top: 0;
+      background-color: $olive;
+
+      &-icon {
+        visibility: visible;
+        opacity: 1;
+
+        &--black {
+          visibility: hidden;
+          opacity: 0;
+        }
+      }
+    }
   }
 }

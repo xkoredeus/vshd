@@ -39,22 +39,22 @@ button {
     text-transform: uppercase;
     display: inline-block;
 
-    &::before {
-      position: absolute;
-      content: '';
-      width: 0;
-      height: 1px;
-      left: 0;
-      bottom: 0;
-      background-color: $dark;
-      @include cubic;
-    }
+    //&::before {
+    //  position: absolute;
+    //  content: '';
+    //  width: 0;
+    //  height: 1px;
+    //  left: 0;
+    //  bottom: 0;
+    //  background-color: $dark;
+    //  @include cubic;
+    //}
 
     &:hover {
-      color: $dark;
-      &::before {
-        width: 100%;
-      }
+      color: $olive;
+      //&::before {
+      //  width: 100%;
+      //}
     }
   }
 

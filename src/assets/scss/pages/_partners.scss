@@ -55,6 +55,7 @@
       height: auto;
       opacity: .3;
       @include ease;
+      transform: translateY(-50%);
 
       &:hover {
         opacity: .8;
