@@ -5,7 +5,7 @@
     }
 
     @include r(576) {
-      grid-row-gap: 150px;
+      grid-row-gap: 30px;
     }
   }
 
@@ -41,7 +41,7 @@
 
       @include r(576) {
         grid-column: span 13;
-        margin-top: -140px;
+        margin-top: -10px;
       }
 
       //&::before {
@@ -130,7 +130,7 @@
 
           @include r(576) {
             grid-column: span 13;
-            margin-top: -140px;
+            margin-top: -10px;
           }
         }
       }

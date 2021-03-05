@@ -6682,7 +6682,7 @@ body.sticky-header.show-menu .header__logo-icon--black {
 
 @media only screen and (max-width: 576px) {
   .nominal .layout__grid {
-    grid-row-gap: 150px;
+    grid-row-gap: 30px;
   }
 }
 
@@ -6727,7 +6727,7 @@ body.sticky-header.show-menu .header__logo-icon--black {
 @media only screen and (max-width: 576px) {
   .nominal__picture-wrapper {
     grid-column: span 13;
-    margin-top: -140px;
+    margin-top: -10px;
   }
 }
 
@@ -6806,7 +6806,7 @@ body.sticky-header.show-menu .header__logo-icon--black {
 @media only screen and (max-width: 576px) {
   .nominal--rtl .nominal__picture-wrapper {
     grid-column: span 13;
-    margin-top: -140px;
+    margin-top: -10px;
   }
 }
 
