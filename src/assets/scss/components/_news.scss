@@ -169,14 +169,16 @@
 
   &__begin {
     @include r(768) {
+
       .nominal__picture-wrapper {
         grid-row: 2/3;
+        grid-column: 1/13;
         margin-top: 0;
       }
 
       .button--circle {
         grid-row: 3/4;
-        margin-top: -140px;
+        grid-column: 1/13;
       }
     }
   }

@@ -7206,11 +7206,12 @@ body.sticky-header.show-menu .header__logo-icon--black {
 @media only screen and (max-width: 768px) {
   .news__begin .nominal__picture-wrapper {
     grid-row: 2/3;
+    grid-column: 1/13;
     margin-top: 0;
   }
   .news__begin .button--circle {
     grid-row: 3/4;
-    margin-top: -140px;
+    grid-column: 1/13;
   }
 }
 
