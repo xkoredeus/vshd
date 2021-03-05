@@ -1,66 +1,66 @@
 $(() => {
   $(window).on('load', function preloader() {
     // gsap
-    // gsap.config({nullTargetWarn:false});
-    // const wrapper = $('.preloader__wrapper');
-    // const overlay = $('.js-preloader-overlay');
-    // const text = $('.js-preloader-first-text');
-    // const base = $('.js-preloader-base');
-    // const promo = $('.js-preloader-text-icon');
-    // const leftDecoration = $('.js-preloader-decoration-1');
-    // const rightDecoration = $('.js-preloader-decoration-2');
-    //
-    // const preloaderAnimation = gsap.timeline({
-    //   defaults: {
-    //     duration: 4,
-    //     ease: "power1.inOut",
-    //   },
-    // });
-    //
-    // const preloaderTimeline1 = gsap
-    //   .timeline({
-    //     defaults: {
-    //       duration: 0.7,
-    //       ease: 'power1.inOut',
-    //     },
-    //   })
-    //   .to(text, {autoAlpha: 0, duration: 0.7});
-    //
-    // const preloaderTimeline2 = gsap
-    //   .timeline({
-    //     defaults: {
-    //       duration: 1,
-    //       ease: 'power1.inOut',
-    //     },
-    //   })
-    //   .to(base, {autoAlpha: 1, duration: 0.3})
-    //   .to(leftDecoration, { left: 'calc(100% + 17px)', duration: 0.5, stagger: 0.2 })
-    //   .to(rightDecoration, { right: 'calc(100% + 17px)', duration: 0.5, delay: -0.5 });
-    //
-    // const preloaderTimeline3 = gsap
-    //     .timeline({
-    //       defaults: {
-    //         duration: 2,
-    //         ease: 'power1.inOut',
-    //       },
-    //     })
-    //     .to(overlay, {scale: 0, duration: 1.5});
-    //
-    // const preloaderTimeline4 = gsap
-    //     .timeline({
-    //       defaults: {
-    //         ease: 'power1.inOut',
-    //       },
-    //     })
-    //     .to(wrapper, {autoAlpha: 0, duration: 0.8, delay: 0.8});
-    //
-    // preloaderAnimation
-    //   .add(preloaderTimeline1, 0)
-    //   .add(preloaderTimeline2, 1)
-    //   .add(preloaderTimeline3, 2)
-    //   .add(preloaderTimeline4, 3);
+    gsap.config({nullTargetWarn:false});
+    const wrapper = $('.preloader__wrapper');
+    const overlay = $('.js-preloader-overlay');
+    const text = $('.js-preloader-first-text');
+    const base = $('.js-preloader-base');
+    const promo = $('.js-preloader-text-icon');
+    const leftDecoration = $('.js-preloader-decoration-1');
+    const rightDecoration = $('.js-preloader-decoration-2');
 
-    $('.preloader__wrapper').fadeOut();
+    const preloaderAnimation = gsap.timeline({
+      defaults: {
+        duration: 4,
+        ease: "power1.inOut",
+      },
+    });
+
+    const preloaderTimeline1 = gsap
+      .timeline({
+        defaults: {
+          duration: 0.7,
+          ease: 'power1.inOut',
+        },
+      })
+      .to(text, {autoAlpha: 0, duration: 0.7});
+
+    const preloaderTimeline2 = gsap
+      .timeline({
+        defaults: {
+          duration: 1,
+          ease: 'power1.inOut',
+        },
+      })
+      .to(base, {autoAlpha: 1, duration: 0.3})
+      .to(leftDecoration, { left: 'calc(100% + 17px)', duration: 0.5, stagger: 0.2 })
+      .to(rightDecoration, { right: 'calc(100% + 17px)', duration: 0.5, delay: -0.5 });
+
+    const preloaderTimeline3 = gsap
+        .timeline({
+          defaults: {
+            duration: 4,
+            ease: 'power1.inOut',
+          },
+        })
+        .to(overlay, {scale: 0, duration: 4});
+
+    const preloaderTimeline4 = gsap
+        .timeline({
+          defaults: {
+            ease: 'power1.inOut',
+          },
+        })
+        .to(wrapper, {autoAlpha: 0, duration: 0.8, delay: 0.8});
+
+    preloaderAnimation
+      .add(preloaderTimeline1, 0)
+      .add(preloaderTimeline2, 1)
+      .add(preloaderTimeline3, 2)
+      .add(preloaderTimeline4, 5);
+
+    // $('.preloader__wrapper').fadeOut();
   });
 });
 
