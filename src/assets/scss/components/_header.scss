@@ -352,7 +352,7 @@ body.sticky-header {
   .header {
 
     &__logo {
-      margin-top: -87%;
+      margin-top: -80px;
       background-color: $tr;
 
       @include r(1200) {
