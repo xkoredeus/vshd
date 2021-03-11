@@ -17,14 +17,23 @@ $(() => {
       },
     });
 
+    const preloaderTimeline0 = gsap
+        .timeline({
+          defaults: {
+            duration: 0.7,
+            ease: 'power1.inOut',
+          },
+        })
+        .to(text, {autoAlpha: 1, duration: 0.7, delay: 0.7});
+
     const preloaderTimeline1 = gsap
       .timeline({
         defaults: {
-          duration: 0.7,
+          duration: 1,
           ease: 'power1.inOut',
         },
       })
-      .to(text, {autoAlpha: 0, duration: 0.7, delay: 1.2});
+      .to(text, {autoAlpha: 0, duration: 2, delay: 0.5});
 
     const preloaderTimeline2 = gsap
       .timeline({
@@ -44,7 +53,7 @@ $(() => {
           //   ease: 'power1.inOut',
           // },
         })
-        .to(overlay, {scale: 0, duration: 3}, "-=5");
+        .to(overlay, {scale: 0, duration: 3}, "-=4");
         // .to(overlay, {
         //   keyframes: [
         //     {scale: 0, duration: 3},
@@ -70,11 +79,12 @@ $(() => {
         .to(wrapper, {autoAlpha: 0, duration: 0.8, delay: 0.8});
 
     preloaderAnimation
-      .add(preloaderTimeline1, 0)
-      .add(preloaderTimeline2, 2)
-      .add(preloaderTimeline3, 1.6)
+      .add(preloaderTimeline0, 0)
+      .add(preloaderTimeline1, 1)
+      .add(preloaderTimeline2, 3.5)
+      .add(preloaderTimeline3, 2.8)
       // .add(preloaderTimeline4, 3.5)
-      .add(preloaderTimeline5, 4);
+      .add(preloaderTimeline5, 5);
 
     // $('.preloader__wrapper').fadeOut();
   });
