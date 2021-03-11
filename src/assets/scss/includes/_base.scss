@@ -63,6 +63,10 @@ a {
     height: 100%;
     padding-top: 105px;
 
+    @include rmin(1800) {
+      padding-top: 115px;
+    }
+
     @include r(768) {
       padding-top: 170px;
     }
