@@ -64,7 +64,7 @@ a {
     padding-top: 105px;
 
     @include rmin(1800) {
-      padding-top: 115px;
+      padding-top: 120px;
     }
 
     @include r(768) {
