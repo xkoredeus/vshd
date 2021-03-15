@@ -113,3 +113,30 @@
     }
   }
 }
+
+.projects {
+  &--two-columns {
+    .layout__grid {
+      grid-row-gap: 15px;
+    }
+
+    .project {
+      grid-column: span 6;
+
+      &__picture {
+        &::before {
+          content: "";
+          width: 1px;
+          margin-left: -1px;
+          float: left;
+          height: 0;
+          padding-top: 619px / 800px * 100%;
+
+          @include r(960) {
+            padding-top: 619px / 1000px * 100%;
+          }
+        }
+      }
+    }
+  }
+}

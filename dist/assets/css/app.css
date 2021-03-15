@@ -6121,7 +6121,7 @@ a:hover {
 
 #cursor {
   position: fixed;
-  z-index: 999;
+  z-index: 10000000;
   left: 0;
   top: 0;
   pointer-events: none;
@@ -7397,6 +7397,29 @@ body.sticky-header.show-menu .header__logo-icon--black {
   -webkit-transform: translateX(4px);
           transform: translateX(4px);
   fill: #D9C557;
+}
+
+.projects--two-columns .layout__grid {
+  grid-row-gap: 15px;
+}
+
+.projects--two-columns .project {
+  grid-column: span 6;
+}
+
+.projects--two-columns .project__picture::before {
+  content: "";
+  width: 1px;
+  margin-left: -1px;
+  float: left;
+  height: 0;
+  padding-top: 77.375%;
+}
+
+@media only screen and (max-width: 960px) {
+  .projects--two-columns .project__picture::before {
+    padding-top: 61.9%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
